@@ -10,84 +10,81 @@ import drFounder from "@/assets/dr-founder.jpg";
 
 const CenterPage = () => {
   const galleryImages = [
-    { src: heroCenter, alt: "Oncovita reception area", label: "Reception" },
-    { src: consultationRoom, alt: "Consultation room", label: "Consultation" },
-    { src: treatmentRoom, alt: "Treatment area", label: "Treatment" },
-    { src: waitingArea, alt: "Waiting area", label: "Waiting Area" },
-    { src: centerExterior, alt: "Center exterior", label: "Exterior" },
+    { src: heroCenter, alt: "Accueil Oncovita", label: "Accueil" },
+    { src: consultationRoom, alt: "Salle de consultation", label: "Consultation" },
+    { src: treatmentRoom, alt: "Espace de traitement", label: "Traitement" },
+    { src: waitingArea, alt: "Salle d'attente", label: "Salle d'Attente" },
+    { src: centerExterior, alt: "Extérieur du centre", label: "Extérieur" },
   ];
 
   return (
     <Layout>
-      <title>The Center — Oncovita Integrative Oncology</title>
-      <meta name="description" content="Discover Oncovita, a modern integrative oncology center in Casablanca designed to provide premium cancer care in a calm, welcoming environment." />
-
       {/* Hero */}
       <section className="relative h-[60vh] flex items-center">
         <div className="absolute inset-0">
-          <img src={centerExterior} alt="Oncovita center" className="w-full h-full object-cover" loading="eager" />
+          <img src={centerExterior} alt="Centre Oncovita" className="w-full h-full object-cover" loading="eager" />
           <div className="absolute inset-0 bg-gradient-to-t from-foreground/80 via-foreground/40 to-foreground/20" />
         </div>
         <div className="relative container-oncovita px-6 lg:px-20">
           <AnimatedSection>
             <p className="font-body text-xs tracking-[0.3em] uppercase text-teal-light mb-4">Oncovita</p>
             <h1 className="font-display text-4xl md:text-5xl lg:text-6xl text-primary-foreground max-w-2xl">
-              The Center
+              Le Centre
             </h1>
           </AnimatedSection>
         </div>
       </section>
 
-      {/* Philosophy */}
+      {/* Philosophie */}
       <section className="section-padding gradient-warm">
         <div className="container-oncovita">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <AnimatedSection>
-              <p className="font-body text-xs tracking-[0.3em] uppercase text-primary mb-4">Our Vision</p>
+              <p className="font-body text-xs tracking-[0.3em] uppercase text-primary mb-4">Notre Vision</p>
               <h2 className="font-display text-3xl md:text-4xl text-foreground mb-6">
-                The Philosophy of Oncovita
+                La Philosophie d'Oncovita
               </h2>
               <p className="font-body text-muted-foreground leading-relaxed mb-6">
-                At Oncovita, we believe oncology care must evolve. It must combine medical precision with genuine patient 
-                support, quality of life with innovation. Our philosophy is rooted in the conviction that every patient 
-                deserves not only the best treatment but also an environment that nurtures hope and healing.
+                Chez Oncovita, nous croyons que les soins en oncologie doivent évoluer. Ils doivent allier précision médicale 
+                et accompagnement sincère du patient, qualité de vie et innovation. Notre philosophie repose sur la conviction 
+                que chaque patient mérite non seulement le meilleur traitement, mais aussi un environnement qui nourrit l'espoir et la guérison.
               </p>
               <p className="font-body text-muted-foreground leading-relaxed">
-                We have reimagined what a cancer care center can be — a place where advanced medicine meets human warmth, 
-                where every detail is designed with the patient's comfort and dignity in mind.
+                Nous avons réinventé ce qu'un centre de soins en cancérologie peut être — un lieu où la médecine avancée 
+                rencontre la chaleur humaine, où chaque détail est pensé pour le confort et la dignité du patient.
               </p>
             </AnimatedSection>
             <AnimatedSection delay={200}>
-              <img src={waitingArea} alt="Oncovita welcoming environment" className="rounded-2xl shadow-card w-full" loading="lazy" />
+              <img src={waitingArea} alt="Environnement accueillant Oncovita" className="rounded-2xl shadow-card w-full" loading="lazy" />
             </AnimatedSection>
           </div>
         </div>
       </section>
 
-      {/* Medical Approach */}
+      {/* Approche Médicale */}
       <section className="section-padding">
         <div className="container-oncovita">
           <AnimatedSection>
             <div className="text-center max-w-3xl mx-auto mb-16">
-              <p className="font-body text-xs tracking-[0.3em] uppercase text-primary mb-4">Medical Approach</p>
+              <p className="font-body text-xs tracking-[0.3em] uppercase text-primary mb-4">Approche Médicale</p>
               <h2 className="font-display text-3xl md:text-4xl text-foreground mb-6">
-                Personalized, multidisciplinary care
+                Des soins personnalisés et pluridisciplinaires
               </h2>
               <p className="font-body text-muted-foreground leading-relaxed text-lg">
-                Every treatment pathway at Oncovita is uniquely designed around the patient, guided by a multidisciplinary 
-                team and informed by the latest advances in oncology.
+                Chaque parcours de soins chez Oncovita est conçu de manière unique autour du patient, guidé par une équipe 
+                pluridisciplinaire et nourri par les dernières avancées en oncologie.
               </p>
             </div>
           </AnimatedSection>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
-              { icon: Microscope, title: "Personalized Treatment", desc: "Each pathway is tailored to the patient's unique diagnosis, needs and preferences." },
-              { icon: Shield, title: "Multidisciplinary Care", desc: "Oncologists, radiotherapists, and support specialists collaborate for comprehensive care." },
-              { icon: Brain, title: "Patient-Centered Decisions", desc: "Patients are active participants in their treatment journey, informed and empowered." },
-              { icon: Clock, title: "Long-Term Monitoring", desc: "Continuous follow-up and support beyond active treatment for lasting wellbeing." },
-              { icon: Heart, title: "Supportive Care", desc: "Integrative programs addressing physical, emotional and psychological needs." },
-              { icon: Eye, title: "Innovation", desc: "Access to the latest treatment protocols and technologies in cancer care." },
+              { icon: Microscope, title: "Traitement Personnalisé", desc: "Chaque parcours est adapté au diagnostic unique, aux besoins et aux préférences du patient." },
+              { icon: Shield, title: "Soins Pluridisciplinaires", desc: "Oncologues, radiothérapeutes et spécialistes de support collaborent pour une prise en charge complète." },
+              { icon: Brain, title: "Décisions Centrées sur le Patient", desc: "Les patients sont acteurs de leur parcours de soins, informés et impliqués dans chaque décision." },
+              { icon: Clock, title: "Suivi à Long Terme", desc: "Un accompagnement continu au-delà du traitement actif pour un bien-être durable." },
+              { icon: Heart, title: "Soins de Support", desc: "Des programmes intégratifs répondant aux besoins physiques, émotionnels et psychologiques." },
+              { icon: Eye, title: "Innovation", desc: "Accès aux derniers protocoles de traitement et technologies en cancérologie." },
             ].map((item, i) => (
               <AnimatedSection key={item.title} delay={i * 100}>
                 <div className="p-8 rounded-2xl border border-border hover-lift">
@@ -103,7 +100,7 @@ const CenterPage = () => {
         </div>
       </section>
 
-      {/* Founder Deep Dive */}
+      {/* Fondatrice */}
       <section className="section-padding gradient-teal">
         <div className="container-oncovita">
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-16 items-center">
@@ -114,26 +111,26 @@ const CenterPage = () => {
             </div>
             <div className="lg:col-span-3">
               <AnimatedSection delay={200}>
-                <p className="font-body text-xs tracking-[0.3em] uppercase text-primary mb-4">Founder & Medical Director</p>
+                <p className="font-body text-xs tracking-[0.3em] uppercase text-primary mb-4">Fondatrice & Directrice Médicale</p>
                 <h2 className="font-display text-3xl md:text-4xl text-foreground mb-6">
                   Dr Malak Rita Hajji
                 </h2>
                 <p className="font-body text-muted-foreground leading-relaxed mb-4">
-                  An oncologist with extensive international training, Dr Malak Rita Hajji has dedicated her career to 
-                  advancing cancer care with a profoundly human approach. Her specialization in medical oncology, combined 
-                  with a deep understanding of integrative medicine, drives the vision of Oncovita.
+                  Oncologue dotée d'une formation internationale approfondie, le Dr Malak Rita Hajji a consacré sa carrière 
+                  à faire progresser les soins en cancérologie avec une approche profondément humaine. Sa spécialisation en 
+                  oncologie médicale, combinée à une compréhension fine de la médecine intégrative, guide la vision d'Oncovita.
                 </p>
                 <p className="font-body text-muted-foreground leading-relaxed mb-6">
-                  Committed to innovation and medical excellence, Dr Hajji brings together cutting-edge treatment protocols 
-                  with a genuine focus on patient wellbeing. Her philosophy is simple: every patient deserves care that is 
-                  as compassionate as it is precise.
+                  Engagée pour l'innovation et l'excellence médicale, le Dr Hajji réunit des protocoles de traitement 
+                  de pointe avec une attention sincère au bien-être du patient. Sa philosophie est simple : chaque patient 
+                  mérite des soins aussi empreints de compassion que de précision.
                 </p>
                 <div className="grid grid-cols-2 gap-6">
                   {[
-                    { label: "Medical Oncology", value: "Specialization" },
-                    { label: "International", value: "Training" },
-                    { label: "Patient-Centered", value: "Philosophy" },
-                    { label: "Innovation", value: "Commitment" },
+                    { label: "Oncologie Médicale", value: "Spécialisation" },
+                    { label: "Internationale", value: "Formation" },
+                    { label: "Centrée sur le Patient", value: "Philosophie" },
+                    { label: "Innovation", value: "Engagement" },
                   ].map((item) => (
                     <div key={item.label} className="border-l-2 border-primary/30 pl-4">
                       <p className="font-body text-xs tracking-wider uppercase text-muted-foreground">{item.value}</p>
@@ -147,55 +144,55 @@ const CenterPage = () => {
         </div>
       </section>
 
-      {/* Environment */}
+      {/* Environnement */}
       <section className="section-padding">
         <div className="container-oncovita">
           <AnimatedSection>
             <div className="text-center max-w-3xl mx-auto mb-16">
-              <p className="font-body text-xs tracking-[0.3em] uppercase text-primary mb-4">The Environment</p>
+              <p className="font-body text-xs tracking-[0.3em] uppercase text-primary mb-4">L'Environnement</p>
               <h2 className="font-display text-3xl md:text-4xl text-foreground mb-6">
-                A space designed for healing
+                Un espace conçu pour la guérison
               </h2>
               <p className="font-body text-muted-foreground leading-relaxed text-lg">
-                Every detail of Oncovita has been thoughtfully designed to create a serene, reassuring and elegant 
-                environment — because the space where care happens profoundly influences the healing journey.
+                Chaque détail d'Oncovita a été pensé avec soin pour créer un environnement serein, rassurant et élégant 
+                — car l'espace où les soins ont lieu influence profondément le parcours de guérison.
               </p>
             </div>
           </AnimatedSection>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <AnimatedSection>
-              <img src={heroCenter} alt="Oncovita reception" className="rounded-2xl w-full h-80 object-cover shadow-soft" loading="lazy" />
+              <img src={heroCenter} alt="Accueil Oncovita" className="rounded-2xl w-full h-80 object-cover shadow-soft" loading="lazy" />
             </AnimatedSection>
             <AnimatedSection delay={100}>
-              <img src={consultationRoom} alt="Consultation room" className="rounded-2xl w-full h-80 object-cover shadow-soft" loading="lazy" />
+              <img src={consultationRoom} alt="Salle de consultation" className="rounded-2xl w-full h-80 object-cover shadow-soft" loading="lazy" />
             </AnimatedSection>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
             <AnimatedSection delay={200}>
-              <img src={treatmentRoom} alt="Treatment area" className="rounded-2xl w-full h-60 object-cover shadow-soft" loading="lazy" />
+              <img src={treatmentRoom} alt="Espace de traitement" className="rounded-2xl w-full h-60 object-cover shadow-soft" loading="lazy" />
             </AnimatedSection>
             <AnimatedSection delay={300}>
-              <img src={waitingArea} alt="Waiting area" className="rounded-2xl w-full h-60 object-cover shadow-soft" loading="lazy" />
+              <img src={waitingArea} alt="Salle d'attente" className="rounded-2xl w-full h-60 object-cover shadow-soft" loading="lazy" />
             </AnimatedSection>
             <AnimatedSection delay={400}>
-              <img src={centerExterior} alt="Center exterior" className="rounded-2xl w-full h-60 object-cover shadow-soft" loading="lazy" />
+              <img src={centerExterior} alt="Extérieur du centre" className="rounded-2xl w-full h-60 object-cover shadow-soft" loading="lazy" />
             </AnimatedSection>
           </div>
         </div>
       </section>
 
-      {/* Inside Oncovita Gallery */}
+      {/* Galerie */}
       <section className="section-padding gradient-warm">
         <div className="container-oncovita">
           <AnimatedSection>
             <div className="text-center max-w-3xl mx-auto mb-16">
-              <p className="font-body text-xs tracking-[0.3em] uppercase text-primary mb-4">Gallery</p>
+              <p className="font-body text-xs tracking-[0.3em] uppercase text-primary mb-4">Galerie</p>
               <h2 className="font-display text-3xl md:text-4xl text-foreground mb-6">
-                Inside Oncovita
+                À l'Intérieur d'Oncovita
               </h2>
               <p className="font-body text-muted-foreground leading-relaxed">
-                A visual journey through our spaces — designed for trust, transparency and comfort.
+                Un voyage visuel à travers nos espaces — conçus pour la confiance, la transparence et le confort.
               </p>
             </div>
           </AnimatedSection>
@@ -215,33 +212,33 @@ const CenterPage = () => {
         </div>
       </section>
 
-      {/* Journal Preview */}
+      {/* Journal */}
       <section className="section-padding">
         <div className="container-oncovita">
           <AnimatedSection>
             <div className="text-center max-w-3xl mx-auto mb-16">
-              <p className="font-body text-xs tracking-[0.3em] uppercase text-primary mb-4">Oncovita Journal</p>
+              <p className="font-body text-xs tracking-[0.3em] uppercase text-primary mb-4">Journal Oncovita</p>
               <h2 className="font-display text-3xl md:text-4xl text-foreground mb-6">
-                Insights & Awareness
+                Actualités & Sensibilisation
               </h2>
               <p className="font-body text-muted-foreground leading-relaxed">
-                Educational content, medical insights and awareness — accessible, reassuring and always patient-centered.
+                Contenus éducatifs, regards médicaux et sensibilisation — accessibles, rassurants et toujours centrés sur le patient.
               </p>
             </div>
           </AnimatedSection>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-              { title: "Understanding Integrative Oncology", category: "Medical Insight", desc: "How combining conventional treatments with supportive care improves patient outcomes and quality of life." },
-              { title: "Cancer Awareness and Prevention", category: "Awareness", desc: "Key facts about early detection, screening programs and lifestyle choices that make a difference." },
-              { title: "Patient Wellbeing During Treatment", category: "Patient Support", desc: "Practical guidance on maintaining physical and emotional wellbeing throughout the treatment journey." },
+              { title: "Comprendre l'Oncologie Intégrative", category: "Regard Médical", desc: "Comment la combinaison des traitements conventionnels avec les soins de support améliore les résultats et la qualité de vie des patients." },
+              { title: "Sensibilisation et Prévention du Cancer", category: "Sensibilisation", desc: "Les faits essentiels sur le dépistage précoce, les programmes de prévention et les choix de vie qui font la différence." },
+              { title: "Bien-être du Patient pendant le Traitement", category: "Accompagnement", desc: "Des conseils pratiques pour maintenir le bien-être physique et émotionnel tout au long du parcours de soins." },
             ].map((post, i) => (
               <AnimatedSection key={post.title} delay={i * 150}>
                 <div className="bg-card rounded-2xl p-8 shadow-soft hover-lift h-full flex flex-col">
                   <p className="font-body text-xs tracking-widest uppercase text-primary mb-4">{post.category}</p>
                   <h3 className="font-display text-xl text-foreground mb-3">{post.title}</h3>
                   <p className="font-body text-sm text-muted-foreground leading-relaxed flex-1">{post.desc}</p>
-                  <p className="font-body text-xs text-primary mt-6 tracking-wider uppercase">Coming Soon</p>
+                  <p className="font-body text-xs text-primary mt-6 tracking-wider uppercase">Bientôt disponible</p>
                 </div>
               </AnimatedSection>
             ))}

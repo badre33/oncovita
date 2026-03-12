@@ -6,7 +6,6 @@ const Footer = () => {
     <footer className="bg-foreground text-primary-foreground">
       <div className="container-oncovita section-padding">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-20">
-          {/* Brand */}
           <div>
             <h3 className="font-display text-3xl mb-4">Oncovita</h3>
             <p className="text-primary-foreground/60 font-body text-sm leading-relaxed mb-6">
@@ -25,17 +24,15 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Navigation */}
           <div>
             <h4 className="font-body text-sm tracking-widest uppercase mb-6 text-primary-foreground/80">Navigation</h4>
             <nav className="flex flex-col gap-3">
-              <Link to="/" className="text-primary-foreground/50 hover:text-primary-foreground transition-colors text-sm font-body">Home</Link>
-              <Link to="/center" className="text-primary-foreground/50 hover:text-primary-foreground transition-colors text-sm font-body">The Center</Link>
+              <Link to="/" className="text-primary-foreground/50 hover:text-primary-foreground transition-colors text-sm font-body">Accueil</Link>
+              <Link to="/center" className="text-primary-foreground/50 hover:text-primary-foreground transition-colors text-sm font-body">Le Centre</Link>
               <Link to="/contact" className="text-primary-foreground/50 hover:text-primary-foreground transition-colors text-sm font-body">Contact</Link>
             </nav>
           </div>
 
-          {/* Contact */}
           <div>
             <h4 className="font-body text-sm tracking-widest uppercase mb-6 text-primary-foreground/80">Contact</h4>
             <div className="flex flex-col gap-4">
@@ -49,7 +46,7 @@ const Footer = () => {
               </a>
               <div className="flex items-start gap-3 text-primary-foreground/50 text-sm font-body">
                 <MapPin size={16} className="mt-0.5 shrink-0" />
-                Casablanca, Morocco
+                Casablanca, Maroc
               </div>
             </div>
           </div>
@@ -57,7 +54,7 @@ const Footer = () => {
 
         <div className="border-t border-primary-foreground/10 mt-16 pt-8 text-center">
           <p className="text-primary-foreground/30 text-xs font-body tracking-wider">
-            © {new Date().getFullYear()} Oncovita — Integrative Oncology Center. All rights reserved.
+            © {new Date().getFullYear()} Oncovita — Centre d'Oncologie Intégrative. Tous droits réservés.
           </p>
         </div>
       </div>

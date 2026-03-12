@@ -4,8 +4,8 @@ import { Menu, X } from "lucide-react";
 import logoOncovita from "@/assets/logo-oncovita.jpg";
 
 const navItems = [
-  { label: "Home", path: "/" },
-  { label: "The Center", path: "/center" },
+  { label: "Accueil", path: "/" },
+  { label: "Le Centre", path: "/center" },
   { label: "Contact", path: "/contact" },
 ];
 
@@ -17,10 +17,9 @@ const Header = () => {
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-md border-b border-border/50">
       <div className="container-oncovita flex items-center justify-between h-20 px-6 lg:px-20">
         <Link to="/" className="flex items-center gap-3">
-          <img src={logoOncovita} alt="Oncovita Logo" className="h-14 w-auto" />
+          <img src={logoOncovita} alt="Logo Oncovita" className="h-14 w-auto" />
         </Link>
 
-        {/* Desktop nav */}
         <nav className="hidden md:flex items-center gap-10">
           {navItems.map((item) => (
             <Link
@@ -37,17 +36,15 @@ const Header = () => {
           ))}
         </nav>
 
-        {/* Mobile menu button */}
         <button
           className="md:hidden text-foreground"
           onClick={() => setMenuOpen(!menuOpen)}
-          aria-label="Toggle menu"
+          aria-label="Ouvrir le menu"
         >
           {menuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>
 
-      {/* Mobile nav */}
       {menuOpen && (
         <div className="md:hidden bg-background/95 backdrop-blur-md border-b border-border animate-fade-in">
           <nav className="flex flex-col items-center gap-6 py-8">
