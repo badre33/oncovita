@@ -10,45 +10,36 @@ import consultationRoom from "@/assets/consultation-room.jpg";
 const Index = () => {
   return (
     <Layout>
-      {/* SEO */}
-      <title>Oncovita — Integrative Oncology Center in Casablanca</title>
-      <meta name="description" content="Oncovita is a premium integrative oncology center in Casablanca offering compassionate cancer care, advanced treatments, and holistic patient support." />
-
       {/* Hero Section */}
       <section className="relative min-h-[90vh] flex items-center">
         <div className="absolute inset-0">
-          <img
-            src={heroImage}
-            alt="Oncovita integrative oncology center interior"
-            className="w-full h-full object-cover"
-            loading="eager"
-          />
+          <img src={heroImage} alt="Intérieur du centre Oncovita" className="w-full h-full object-cover" loading="eager" />
           <div className="absolute inset-0 bg-gradient-to-r from-foreground/80 via-foreground/60 to-foreground/20" />
         </div>
         <div className="relative container-oncovita px-6 lg:px-20 py-20">
           <div className="max-w-2xl">
             <AnimatedSection>
               <p className="font-body text-xs tracking-[0.3em] uppercase text-teal-light mb-6">
-                Integrative Oncology Center — Casablanca
+                Centre d'Oncologie Intégrative — Casablanca
               </p>
             </AnimatedSection>
             <AnimatedSection delay={200}>
               <h1 className="font-display text-4xl md:text-5xl lg:text-6xl text-primary-foreground leading-tight mb-6">
-                Reimagining oncology care with precision, compassion and innovation.
+                Réinventer la prise en charge en oncologie avec précision, compassion et innovation.
               </h1>
             </AnimatedSection>
             <AnimatedSection delay={400}>
               <p className="font-body text-primary-foreground/70 text-lg md:text-xl leading-relaxed mb-10 max-w-xl">
-                A new approach to oncology combining medical expertise, advanced technologies and integrative patient care.
+                Une nouvelle approche de l'oncologie alliant expertise médicale, technologies avancées et soins intégratifs centrés sur le patient.
               </p>
             </AnimatedSection>
             <AnimatedSection delay={600}>
               <div className="flex flex-wrap gap-4">
                 <Button variant="hero" size="lg" asChild>
-                  <Link to="/center">Discover the Center</Link>
+                  <Link to="/center">Découvrir le Centre</Link>
                 </Button>
                 <Button variant="hero-outline" size="lg" className="border-primary-foreground/40 text-primary-foreground hover:bg-primary-foreground/10 hover:text-primary-foreground" asChild>
-                  <Link to="/contact">Contact Us</Link>
+                  <Link to="/contact">Nous Contacter</Link>
                 </Button>
               </div>
             </AnimatedSection>
@@ -56,28 +47,28 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Philosophy Section */}
+      {/* Philosophie */}
       <section className="section-padding gradient-warm">
         <div className="container-oncovita">
           <AnimatedSection>
             <div className="text-center max-w-3xl mx-auto mb-16">
-              <p className="font-body text-xs tracking-[0.3em] uppercase text-primary mb-4">Our Philosophy</p>
+              <p className="font-body text-xs tracking-[0.3em] uppercase text-primary mb-4">Notre Philosophie</p>
               <h2 className="font-display text-3xl md:text-4xl lg:text-5xl text-foreground mb-6">
-                A different vision of oncology
+                Une vision différente de l'oncologie
               </h2>
               <p className="font-body text-muted-foreground leading-relaxed text-lg">
-                Oncovita offers an approach that combines scientific rigor, personalized treatment, 
-                attention to quality of life and integrative medicine — because healing goes beyond treating the disease.
+                Oncovita propose une approche qui allie rigueur scientifique, traitements personnalisés, 
+                attention à la qualité de vie et médecine intégrative — car guérir va au-delà du traitement de la maladie.
               </p>
             </div>
           </AnimatedSection>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
-              { icon: Sparkles, title: "Medical Excellence", desc: "Rigorous oncology practice backed by the latest scientific advances and treatment protocols." },
-              { icon: Heart, title: "Human-Centered Care", desc: "Every patient is unique. We design personalized treatment pathways with compassion." },
-              { icon: Leaf, title: "Integrative Approach", desc: "Combining medical oncology with supportive care for body, mind and emotional wellbeing." },
-              { icon: Users, title: "Multidisciplinary Team", desc: "A coordinated team of specialists working together for comprehensive patient care." },
+              { icon: Sparkles, title: "Excellence Médicale", desc: "Une pratique oncologique rigoureuse s'appuyant sur les dernières avancées scientifiques et protocoles de traitement." },
+              { icon: Heart, title: "Soins Centrés sur l'Humain", desc: "Chaque patient est unique. Nous concevons des parcours de soins personnalisés avec compassion." },
+              { icon: Leaf, title: "Approche Intégrative", desc: "Combinant l'oncologie médicale avec des soins de support pour le corps, l'esprit et le bien-être émotionnel." },
+              { icon: Users, title: "Équipe Pluridisciplinaire", desc: "Une équipe coordonnée de spécialistes travaillant ensemble pour une prise en charge complète." },
             ].map((item, i) => (
               <AnimatedSection key={item.title} delay={i * 150}>
                 <div className="bg-card p-8 rounded-2xl shadow-soft hover-lift text-center">
@@ -93,40 +84,35 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Integrative Oncology */}
+      {/* Oncologie Intégrative */}
       <section className="section-padding">
         <div className="container-oncovita">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <AnimatedSection>
               <div className="relative">
-                <img
-                  src={consultationRoom}
-                  alt="Oncovita consultation room"
-                  className="rounded-2xl shadow-card w-full"
-                  loading="lazy"
-                />
+                <img src={consultationRoom} alt="Salle de consultation Oncovita" className="rounded-2xl shadow-card w-full" loading="lazy" />
                 <div className="absolute -bottom-6 -right-6 bg-primary text-primary-foreground p-6 rounded-2xl shadow-elevated hidden md:block">
-                  <p className="font-display text-2xl">Patient-First</p>
-                  <p className="font-body text-xs tracking-wider uppercase mt-1">Integrative Care</p>
+                  <p className="font-display text-2xl">Le Patient d'Abord</p>
+                  <p className="font-body text-xs tracking-wider uppercase mt-1">Soins Intégratifs</p>
                 </div>
               </div>
             </AnimatedSection>
 
             <AnimatedSection delay={200}>
-              <p className="font-body text-xs tracking-[0.3em] uppercase text-primary mb-4">Integrative Oncology</p>
+              <p className="font-body text-xs tracking-[0.3em] uppercase text-primary mb-4">Oncologie Intégrative</p>
               <h2 className="font-display text-3xl md:text-4xl text-foreground mb-6">
-                Caring for the whole person
+                Prendre soin de la personne dans sa globalité
               </h2>
               <p className="font-body text-muted-foreground leading-relaxed mb-6">
-                Integrative oncology is a care model that considers the patient as a whole — body, mind and emotional wellbeing. 
-                At Oncovita, we believe that effective cancer care must address not only the disease but the person living with it.
+                L'oncologie intégrative est un modèle de soins qui considère le patient dans sa globalité — corps, esprit et bien-être émotionnel. 
+                Chez Oncovita, nous croyons qu'une prise en charge efficace du cancer doit adresser non seulement la maladie mais aussi la personne qui vit avec.
               </p>
               <ul className="space-y-4 mb-8">
                 {[
-                  "Medical oncology expertise and advanced treatments",
-                  "Radiotherapy and precision-based therapies",
-                  "Integrative supportive care programs",
-                  "Physical and emotional wellbeing support",
+                  "Expertise en oncologie médicale et traitements avancés",
+                  "Radiothérapie et thérapies de précision",
+                  "Programmes de soins de support intégratifs",
+                  "Accompagnement du bien-être physique et émotionnel",
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-3">
                     <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 shrink-0" />
@@ -136,7 +122,7 @@ const Index = () => {
               </ul>
               <Button variant="outline" size="lg" asChild>
                 <Link to="/center" className="gap-2">
-                  Learn More <ArrowRight size={16} />
+                  En Savoir Plus <ArrowRight size={16} />
                 </Link>
               </Button>
             </AnimatedSection>
@@ -144,60 +130,56 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Founder Section */}
+      {/* Fondatrice */}
       <section className="section-padding gradient-teal">
         <div className="container-oncovita">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <AnimatedSection delay={100}>
-              <p className="font-body text-xs tracking-[0.3em] uppercase text-primary mb-4">The Founder</p>
+              <p className="font-body text-xs tracking-[0.3em] uppercase text-primary mb-4">La Fondatrice</p>
               <h2 className="font-display text-3xl md:text-4xl text-foreground mb-6">
                 Dr Malak Rita Hajji
               </h2>
               <p className="font-body text-muted-foreground leading-relaxed mb-6">
-                Dr Malak Rita Hajji founded Oncovita with the ambition of creating a place where medical excellence meets 
-                human-centered care. Her approach combines rigorous oncology practice with a deep commitment to patient 
-                wellbeing and personalized treatment pathways.
+                Le Dr Malak Rita Hajji a fondé Oncovita avec l'ambition de créer un lieu où l'excellence médicale 
+                rencontre les soins centrés sur l'humain. Son approche allie une pratique oncologique rigoureuse 
+                à un engagement profond envers le bien-être du patient et des parcours de traitement personnalisés.
               </p>
               <p className="font-body text-muted-foreground leading-relaxed mb-8">
-                With international training and a specialization in medical oncology, Dr Hajji brings together the latest 
-                advances in cancer treatment with an integrative vision that places the patient at the heart of every decision.
+                Avec une formation internationale et une spécialisation en oncologie médicale, le Dr Hajji réunit 
+                les dernières avancées dans le traitement du cancer avec une vision intégrative qui place le patient 
+                au cœur de chaque décision.
               </p>
               <Button variant="default" size="lg" asChild>
                 <Link to="/center" className="gap-2">
-                  Meet Dr Hajji <ArrowRight size={16} />
+                  Rencontrer le Dr Hajji <ArrowRight size={16} />
                 </Link>
               </Button>
             </AnimatedSection>
 
             <AnimatedSection delay={300}>
               <div className="relative">
-                <img
-                  src={drFounder}
-                  alt="Dr Malak Rita Hajji, founder of Oncovita"
-                  className="rounded-2xl shadow-card w-full max-w-md mx-auto"
-                  loading="lazy"
-                />
+                <img src={drFounder} alt="Dr Malak Rita Hajji, fondatrice d'Oncovita" className="rounded-2xl shadow-card w-full max-w-md mx-auto" loading="lazy" />
               </div>
             </AnimatedSection>
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
+      {/* CTA */}
       <section className="section-padding">
         <div className="container-oncovita text-center max-w-3xl mx-auto">
           <AnimatedSection>
-            <p className="font-body text-xs tracking-[0.3em] uppercase text-primary mb-4">Get in Touch</p>
+            <p className="font-body text-xs tracking-[0.3em] uppercase text-primary mb-4">Prenez Contact</p>
             <h2 className="font-display text-3xl md:text-4xl text-foreground mb-6">
-              We are here to guide and support you
+              Nous sommes là pour vous accompagner
             </h2>
             <p className="font-body text-muted-foreground leading-relaxed mb-10 text-lg">
-              Do not hesitate to reach out for information or to schedule a consultation. 
-              Our team is dedicated to providing you with the care and attention you deserve.
+              N'hésitez pas à nous contacter pour toute information ou pour prendre rendez-vous. 
+              Notre équipe est dédiée à vous offrir l'attention et les soins que vous méritez.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Button variant="hero" size="xl" asChild>
-                <Link to="/contact">Contact the Center</Link>
+                <Link to="/contact">Contacter le Centre</Link>
               </Button>
             </div>
           </AnimatedSection>
