@@ -17,7 +17,7 @@ const Header = () => {
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-md border-b border-border/50">
       <div className="container-oncovita flex items-center justify-between h-20 px-6 lg:px-20">
         <Link to="/" className="flex items-center gap-3">
-          <img src={logoOncovita} alt="Logo Oncovita" className="h-14 w-auto" />
+          <img src={logoOncovita} alt="Logo Oncovita" className="h-20 w-auto mix-blend-multiply" />
         </Link>
 
         <nav className="hidden md:flex items-center gap-10">
