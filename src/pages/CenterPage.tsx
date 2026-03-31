@@ -8,6 +8,7 @@ import waitingArea from "@/assets/waiting-area.jpg";
 import heroCenter from "@/assets/hero-center.jpg";
 import drFounder from "@/assets/dr-founder.jpg";
 import laParenthese from "@/assets/la-parenthese.jpg";
+import echappeeBelle from "@/assets/echappee-belle.jpg";
 
 const CenterPage = () => {
   const galleryImages = [
