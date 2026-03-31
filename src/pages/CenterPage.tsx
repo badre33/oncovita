@@ -187,6 +187,7 @@ const CenterPage = () => {
                 <p className="font-body text-sm text-muted-foreground leading-relaxed mt-4">
                   L'Échappée Belle est un espace dédié au ressourcement et à l'écoute.
                 </p>
+                </div>
               </div>
             </AnimatedSection>
 
