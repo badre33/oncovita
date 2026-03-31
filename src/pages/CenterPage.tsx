@@ -9,6 +9,7 @@ import heroCenter from "@/assets/hero-center.jpg";
 import drFounder from "@/assets/dr-founder.jpg";
 import laParenthese from "@/assets/la-parenthese.jpg";
 import echappeeBelle from "@/assets/echappee-belle.jpg";
+import lelan from "@/assets/lelan.jpg";
 
 const CenterPage = () => {
   const galleryImages = [
