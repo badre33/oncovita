@@ -126,7 +126,9 @@ const CenterPage = () => {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {/* Étape 1 */}
             <AnimatedSection delay={0}>
-              <div className="bg-card p-8 rounded-2xl shadow-soft h-full">
+              <div className="bg-card rounded-2xl shadow-soft h-full overflow-hidden">
+                <img src={laParenthese} alt="Salle La Parenthèse" className="w-full h-48 object-cover" />
+                <div className="p-8">
                 <div className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-primary text-primary-foreground font-display text-lg mb-6">
                   1
                 </div>
