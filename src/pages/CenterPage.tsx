@@ -160,7 +160,9 @@ const CenterPage = () => {
 
             {/* Étape 2 */}
             <AnimatedSection delay={150}>
-              <div className="bg-card p-8 rounded-2xl shadow-soft h-full">
+              <div className="bg-card rounded-2xl shadow-soft h-full overflow-hidden">
+                <img src={echappeeBelle} alt="Espace L'Échappée Belle" className="w-full h-48 object-cover" />
+                <div className="p-8">
                 <div className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-primary text-primary-foreground font-display text-lg mb-6">
                   2
                 </div>
