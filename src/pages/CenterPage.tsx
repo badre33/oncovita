@@ -9,6 +9,7 @@ import heroCenter from "@/assets/hero-center.jpg";
 import drFounder from "@/assets/dr-founder.jpg";
 import laParenthese from "@/assets/la-parenthese.jpg";
 import echappeeBelle from "@/assets/echappee-belle.jpg";
+import lelan from "@/assets/lelan.jpg";
 
 const CenterPage = () => {
   const galleryImages = [
@@ -193,7 +194,9 @@ const CenterPage = () => {
 
             {/* Étape 3 */}
             <AnimatedSection delay={300}>
-              <div className="bg-card p-8 rounded-2xl shadow-soft h-full">
+              <div className="bg-card rounded-2xl shadow-soft h-full overflow-hidden">
+                <img src={lelan} alt="Salle L'Élan" className="w-full h-48 object-cover" />
+                <div className="p-8">
                 <div className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-primary text-primary-foreground font-display text-lg mb-6">
                   3
                 </div>
@@ -219,6 +222,7 @@ const CenterPage = () => {
                 <p className="font-body text-sm text-muted-foreground leading-relaxed mt-4">
                   L'Élan est un espace dédié au mouvement, à la reconstruction physique et à la reprise de confiance dans son corps.
                 </p>
+                </div>
               </div>
             </AnimatedSection>
           </div>
