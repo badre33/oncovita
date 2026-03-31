@@ -7,6 +7,7 @@ import treatmentRoom from "@/assets/treatment-room.jpg";
 import waitingArea from "@/assets/waiting-area.jpg";
 import heroCenter from "@/assets/hero-center.jpg";
 import drFounder from "@/assets/dr-founder.jpg";
+import laParenthese from "@/assets/la-parenthese.jpg";
 
 const CenterPage = () => {
   const galleryImages = [
