@@ -153,6 +153,7 @@ const CenterPage = () => {
                 <p className="font-body text-sm text-muted-foreground leading-relaxed mt-4">
                   Cette étape est essentielle pour construire une relation de confiance et définir un plan de prise en charge adapté.
                 </p>
+                </div>
               </div>
             </AnimatedSection>
 
