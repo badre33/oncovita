@@ -222,6 +222,7 @@ const CenterPage = () => {
                 <p className="font-body text-sm text-muted-foreground leading-relaxed mt-4">
                   L'Élan est un espace dédié au mouvement, à la reconstruction physique et à la reprise de confiance dans son corps.
                 </p>
+                </div>
               </div>
             </AnimatedSection>
           </div>
