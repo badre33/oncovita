@@ -5,6 +5,7 @@ import centerExterior from "@/assets/center-exterior.jpg";
 import consultationRoom from "@/assets/consultation-room.jpg";
 import treatmentRoom from "@/assets/treatment-room.jpg";
 import waitingArea from "@/assets/waiting-area.jpg";
+import histoireOncovita from "@/assets/histoire-oncovita.jpg";
 import heroCenter from "@/assets/hero-center.jpg";
 import drFounder from "@/assets/dr-founder.jpg";
 import laParenthese from "@/assets/la-parenthese.jpg";
@@ -66,7 +67,7 @@ const CenterPage = () => {
               </p>
             </AnimatedSection>
             <AnimatedSection delay={200}>
-              <img src={waitingArea} alt="Espace d'accueil Oncovita" className="rounded-2xl shadow-card w-full" loading="lazy" />
+              <img src={histoireOncovita} alt="Salle de yoga et bien-être Oncovita" className="rounded-2xl shadow-card w-full" loading="lazy" />
             </AnimatedSection>
           </div>
         </div>
