@@ -67,7 +67,7 @@ const CenterPage = () => {
               </p>
             </AnimatedSection>
             <AnimatedSection delay={200}>
-              <img src={waitingArea} alt="Espace d'accueil Oncovita" className="rounded-2xl shadow-card w-full" loading="lazy" />
+              <img src={histoireOncovita} alt="Salle de yoga et bien-être Oncovita" className="rounded-2xl shadow-card w-full" loading="lazy" />
             </AnimatedSection>
           </div>
         </div>
