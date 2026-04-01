@@ -313,7 +313,7 @@ const CenterPage = () => {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
             <AnimatedSection delay={200}>
-              <img src={treatmentRoom} alt="Espace de bien-être" className="rounded-2xl w-full h-60 object-cover shadow-soft" loading="lazy" />
+              <img src={salleReunion} alt="Salle de réunion Oncovita" className="rounded-2xl w-full h-60 object-cover shadow-soft" loading="lazy" />
             </AnimatedSection>
             <AnimatedSection delay={300}>
               <img src={waitingArea} alt="Espace d'accueil" className="rounded-2xl w-full h-60 object-cover shadow-soft" loading="lazy" />
