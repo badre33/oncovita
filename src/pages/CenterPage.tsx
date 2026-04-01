@@ -5,7 +5,7 @@ import centerExterior from "@/assets/center-exterior.jpg";
 import consultationRoom from "@/assets/consultation-room.jpg";
 import bureauConsultation from "@/assets/bureau-consultation.jpg";
 import salleReunion from "@/assets/salle-reunion.jpg";
-import waitingArea from "@/assets/waiting-area.jpg";
+import terrasseOncovita from "@/assets/terrasse-oncovita.jpg";
 import histoireOncovita from "@/assets/histoire-oncovita.jpg";
 import heroCenter from "@/assets/hero-center.jpg";
 import drFounder from "@/assets/dr-founder.jpg";
