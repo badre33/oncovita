@@ -4,7 +4,7 @@ import AnimatedSection from "@/components/AnimatedSection";
 import centerExterior from "@/assets/center-exterior.jpg";
 import consultationRoom from "@/assets/consultation-room.jpg";
 import bureauConsultation from "@/assets/bureau-consultation.jpg";
-import treatmentRoom from "@/assets/treatment-room.jpg";
+import salleReunion from "@/assets/salle-reunion.jpg";
 import waitingArea from "@/assets/waiting-area.jpg";
 import histoireOncovita from "@/assets/histoire-oncovita.jpg";
 import heroCenter from "@/assets/hero-center.jpg";
@@ -17,7 +17,7 @@ const CenterPage = () => {
   const galleryImages = [
     { src: heroCenter, alt: "Accueil Oncovita", label: "Accueil" },
     { src: consultationRoom, alt: "La Parenthèse — Salle de consultation", label: "La Parenthèse" },
-    { src: treatmentRoom, alt: "L'Échappée Belle — Espace bien-être", label: "L'Échappée Belle" },
+    { src: salleReunion, alt: "Salle de réunion Oncovita", label: "Salle de réunion" },
     { src: waitingArea, alt: "L'Élan — Salle de mouvement", label: "L'Élan" },
     { src: centerExterior, alt: "Extérieur du centre", label: "Extérieur" },
   ];
@@ -313,7 +313,7 @@ const CenterPage = () => {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
             <AnimatedSection delay={200}>
-              <img src={treatmentRoom} alt="Espace de bien-être" className="rounded-2xl w-full h-60 object-cover shadow-soft" loading="lazy" />
+              <img src={salleReunion} alt="Salle de réunion Oncovita" className="rounded-2xl w-full h-60 object-cover shadow-soft" loading="lazy" />
             </AnimatedSection>
             <AnimatedSection delay={300}>
               <img src={waitingArea} alt="Espace d'accueil" className="rounded-2xl w-full h-60 object-cover shadow-soft" loading="lazy" />
