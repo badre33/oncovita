@@ -5,7 +5,7 @@ import centerExterior from "@/assets/center-exterior.jpg";
 import consultationRoom from "@/assets/consultation-room.jpg";
 import bureauConsultation from "@/assets/bureau-consultation.jpg";
 import salleReunion from "@/assets/salle-reunion.jpg";
-import waitingArea from "@/assets/waiting-area.jpg";
+import terrasseOncovita from "@/assets/terrasse-oncovita.jpg";
 import histoireOncovita from "@/assets/histoire-oncovita.jpg";
 import heroCenter from "@/assets/hero-center.jpg";
 import drFounder from "@/assets/dr-founder.jpg";
@@ -18,7 +18,7 @@ const CenterPage = () => {
     { src: heroCenter, alt: "Accueil Oncovita", label: "Accueil" },
     { src: consultationRoom, alt: "La Parenthèse — Salle de consultation", label: "La Parenthèse" },
     { src: salleReunion, alt: "Salle de réunion Oncovita", label: "Salle de réunion" },
-    { src: waitingArea, alt: "L'Élan — Salle de mouvement", label: "L'Élan" },
+    { src: terrasseOncovita, alt: "Terrasse Oncovita", label: "Terrasse" },
     { src: centerExterior, alt: "Extérieur du centre", label: "Extérieur" },
   ];
 
@@ -316,7 +316,7 @@ const CenterPage = () => {
               <img src={salleReunion} alt="Salle de réunion Oncovita" className="rounded-2xl w-full h-60 object-cover shadow-soft" loading="lazy" />
             </AnimatedSection>
             <AnimatedSection delay={300}>
-              <img src={waitingArea} alt="Espace d'accueil" className="rounded-2xl w-full h-60 object-cover shadow-soft" loading="lazy" />
+              <img src={terrasseOncovita} alt="Terrasse Oncovita avec vue sur Casablanca" className="rounded-2xl w-full h-60 object-cover shadow-soft" loading="lazy" />
             </AnimatedSection>
             <AnimatedSection delay={400}>
               <img src={centerExterior} alt="Extérieur du centre" className="rounded-2xl w-full h-60 object-cover shadow-soft" loading="lazy" />
