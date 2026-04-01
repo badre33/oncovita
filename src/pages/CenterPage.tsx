@@ -18,7 +18,7 @@ const CenterPage = () => {
     { src: heroCenter, alt: "Accueil Oncovita", label: "Accueil" },
     { src: consultationRoom, alt: "La Parenthèse — Salle de consultation", label: "La Parenthèse" },
     { src: salleReunion, alt: "Salle de réunion Oncovita", label: "Salle de réunion" },
-    { src: waitingArea, alt: "L'Élan — Salle de mouvement", label: "L'Élan" },
+    { src: terrasseOncovita, alt: "Terrasse Oncovita", label: "Terrasse" },
     { src: centerExterior, alt: "Extérieur du centre", label: "Extérieur" },
   ];
 
