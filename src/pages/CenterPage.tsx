@@ -3,6 +3,7 @@ import Layout from "@/components/Layout";
 import AnimatedSection from "@/components/AnimatedSection";
 import centerExterior from "@/assets/center-exterior.jpg";
 import consultationRoom from "@/assets/consultation-room.jpg";
+import bureauConsultation from "@/assets/bureau-consultation.jpg";
 import treatmentRoom from "@/assets/treatment-room.jpg";
 import waitingArea from "@/assets/waiting-area.jpg";
 import histoireOncovita from "@/assets/histoire-oncovita.jpg";
@@ -307,7 +308,7 @@ const CenterPage = () => {
               <img src={heroCenter} alt="Accueil Oncovita" className="rounded-2xl w-full h-80 object-cover shadow-soft" loading="lazy" />
             </AnimatedSection>
             <AnimatedSection delay={100}>
-              <img src={consultationRoom} alt="Salle de consultation" className="rounded-2xl w-full h-80 object-cover shadow-soft" loading="lazy" />
+              <img src={bureauConsultation} alt="Bureau de consultation Oncovita" className="rounded-2xl w-full h-80 object-cover shadow-soft" loading="lazy" />
             </AnimatedSection>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
