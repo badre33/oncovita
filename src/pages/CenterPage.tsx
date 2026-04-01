@@ -3,6 +3,7 @@ import Layout from "@/components/Layout";
 import AnimatedSection from "@/components/AnimatedSection";
 import centerExterior from "@/assets/center-exterior.jpg";
 import consultationRoom from "@/assets/consultation-room.jpg";
+import bureauConsultation from "@/assets/bureau-consultation.jpg";
 import treatmentRoom from "@/assets/treatment-room.jpg";
 import waitingArea from "@/assets/waiting-area.jpg";
 import histoireOncovita from "@/assets/histoire-oncovita.jpg";
