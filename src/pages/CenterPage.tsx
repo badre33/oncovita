@@ -316,7 +316,7 @@ const CenterPage = () => {
               <img src={salleReunion} alt="Salle de réunion Oncovita" className="rounded-2xl w-full h-60 object-cover shadow-soft" loading="lazy" />
             </AnimatedSection>
             <AnimatedSection delay={300}>
-              <img src={waitingArea} alt="Espace d'accueil" className="rounded-2xl w-full h-60 object-cover shadow-soft" loading="lazy" />
+              <img src={terrasseOncovita} alt="Terrasse Oncovita avec vue sur Casablanca" className="rounded-2xl w-full h-60 object-cover shadow-soft" loading="lazy" />
             </AnimatedSection>
             <AnimatedSection delay={400}>
               <img src={centerExterior} alt="Extérieur du centre" className="rounded-2xl w-full h-60 object-cover shadow-soft" loading="lazy" />
