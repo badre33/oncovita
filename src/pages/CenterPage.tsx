@@ -4,7 +4,7 @@ import AnimatedSection from "@/components/AnimatedSection";
 import centerExterior from "@/assets/center-exterior.jpg";
 import consultationRoom from "@/assets/consultation-room.jpg";
 import bureauConsultation from "@/assets/bureau-consultation.jpg";
-import treatmentRoom from "@/assets/treatment-room.jpg";
+import salleReunion from "@/assets/salle-reunion.jpg";
 import waitingArea from "@/assets/waiting-area.jpg";
 import histoireOncovita from "@/assets/histoire-oncovita.jpg";
 import heroCenter from "@/assets/hero-center.jpg";
