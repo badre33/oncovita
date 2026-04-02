@@ -47,13 +47,13 @@ const Header = () => {
 
       {menuOpen && (
         <div className="md:hidden bg-background/95 backdrop-blur-md border-b border-border animate-fade-in">
-          <nav className="flex flex-col items-center gap-6 py-8">
+          <nav className="flex flex-col items-center gap-8 py-10">
             {navItems.map((item) => (
               <Link
                 key={item.path}
                 to={item.path}
                 onClick={() => setMenuOpen(false)}
-                className={`font-body text-sm tracking-widest uppercase transition-colors duration-300 ${
+                className={`font-body text-base tracking-widest uppercase transition-colors duration-300 ${
                   location.pathname === item.path
                     ? "text-primary font-semibold"
                     : "text-foreground/70 hover:text-primary"

@@ -29,7 +29,7 @@ const Index = () => {
               </h1>
             </AnimatedSection>
             <AnimatedSection delay={400}>
-              <p className="font-body text-primary-foreground/70 text-lg md:text-xl leading-relaxed mb-10 max-w-xl">
+              <p className="font-body text-primary-foreground/70 text-base md:text-xl leading-relaxed mb-8 md:mb-10 max-w-xl">
                 Oncovita est un centre médical dédié à l'accompagnement des patients atteints de cancer, 
                 alliant médecine oncologique fondée sur les preuves scientifiques et accompagnement global du patient.
               </p>
