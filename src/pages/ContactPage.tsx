@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Mail, Phone, MapPin, Send, Instagram, Linkedin, Facebook } from "lucide-react";
+import { Mail, Phone, MapPin, Send, Instagram, Linkedin, Facebook, Clock } from "lucide-react";
 import Layout from "@/components/Layout";
 import AnimatedSection from "@/components/AnimatedSection";
 import { Button } from "@/components/ui/button";
@@ -119,13 +119,13 @@ const ContactPage = () => {
               <AnimatedSection delay={200}>
                 <h2 className="font-display text-2xl md:text-3xl text-foreground mb-8">Coordonnées</h2>
                 <div className="space-y-8">
-                  <a href="tel:+212500000000" className="flex items-start gap-4 group">
+                  <a href="tel:+212522980719" className="flex items-start gap-4 group">
                     <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center shrink-0 group-hover:bg-primary/20 transition-colors">
                       <Phone size={18} className="text-primary" />
                     </div>
                     <div>
                       <p className="font-body text-xs tracking-widest uppercase text-muted-foreground mb-1">Téléphone</p>
-                      <p className="font-body text-foreground">+212 5 00 00 00 00</p>
+                      <p className="font-body text-foreground">+212 5 22 98 07 19</p>
                     </div>
                   </a>
 
@@ -145,18 +145,29 @@ const ContactPage = () => {
                     </div>
                     <div>
                       <p className="font-body text-xs tracking-widest uppercase text-muted-foreground mb-1">Adresse</p>
-                      <p className="font-body text-foreground">Casablanca, Maroc</p>
+                      <p className="font-body text-foreground">5ème étage, Immeuble FIRST, 401 Rte d'El Jadida, Casablanca 20000</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
+                      <Clock size={18} className="text-primary" />
+                    </div>
+                    <div>
+                      <p className="font-body text-xs tracking-widest uppercase text-muted-foreground mb-1">Horaires</p>
+                      <p className="font-body text-foreground text-sm">Lun – Ven : 8h30 – 12h30 / 13h30 – 17h30</p>
+                      <p className="font-body text-muted-foreground text-sm">Sam – Dim : Fermé</p>
                     </div>
                   </div>
 
                   <div className="pt-6 border-t border-border">
                     <p className="font-body text-xs tracking-widest uppercase text-muted-foreground mb-4">Suivez-nous</p>
                     <div className="flex gap-4">
-                      <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"
+                      <a href="https://www.instagram.com/oncovita_/" target="_blank" rel="noopener noreferrer"
                         className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary hover:bg-primary hover:text-primary-foreground transition-all" aria-label="Instagram">
                         <Instagram size={18} />
                       </a>
-                      <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"
+                      <a href="https://www.linkedin.com/company/oncovita/" target="_blank" rel="noopener noreferrer"
                         className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary hover:bg-primary hover:text-primary-foreground transition-all" aria-label="LinkedIn">
                         <Linkedin size={18} />
                       </a>
@@ -179,14 +190,14 @@ const ContactPage = () => {
           <AnimatedSection>
             <div className="rounded-2xl overflow-hidden shadow-card h-96">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d106376.72691864977!2d-7.669863499999999!3d33.57226785!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda7cd4778aa113b%3A0xb06c1d84f310fd3!2sCasablanca%2C%20Morocco!5e0!3m2!1sfr!2sma!4v1710000000000!5m2!1sfr!2sma"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3324.5!2d-7.6!3d33.56!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda62d9965d6e9b3%3A0x6f186776a8d16c92!2sOncovita!5e0!3m2!1sfr!2sma"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="Localisation Oncovita à Casablanca"
+                title="Localisation Oncovita — 401 Rte d'El Jadida, Casablanca"
               />
             </div>
           </AnimatedSection>
