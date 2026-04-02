@@ -25,15 +25,15 @@ const CenterPage = () => {
   return (
     <Layout>
       {/* Hero */}
-      <section className="relative h-[60vh] flex items-center">
+      <section className="relative h-[50vh] md:h-[60vh] flex items-center">
         <div className="absolute inset-0">
           <img src={centerExterior} alt="Centre Oncovita" className="w-full h-full object-cover" loading="eager" />
           <div className="absolute inset-0 bg-gradient-to-t from-foreground/80 via-foreground/40 to-foreground/20" />
         </div>
-        <div className="relative container-oncovita px-6 lg:px-20">
+        <div className="relative container-oncovita px-5 md:px-6 lg:px-20">
           <AnimatedSection>
             <p className="font-body text-xs tracking-[0.3em] uppercase text-teal-light mb-4">Oncovita</p>
-            <h1 className="font-display text-4xl md:text-5xl lg:text-6xl text-primary-foreground max-w-2xl">
+            <h1 className="font-display text-3xl md:text-5xl lg:text-6xl text-primary-foreground max-w-2xl">
               Le Centre
             </h1>
             <p className="font-body text-primary-foreground/70 text-lg mt-4 max-w-xl">

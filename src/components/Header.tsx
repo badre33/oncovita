@@ -15,9 +15,9 @@ const Header = () => {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-md border-b border-border/50">
-      <div className="container-oncovita flex items-center justify-between h-20 px-6 lg:px-20">
+      <div className="container-oncovita flex items-center justify-between h-16 md:h-20 px-4 md:px-6 lg:px-20">
         <Link to="/" className="flex items-center gap-3">
-          <img src={logoOncovita} alt="Logo Oncovita" className="h-20 w-auto mix-blend-multiply" />
+          <img src={logoOncovita} alt="Logo Oncovita" className="h-14 md:h-20 w-auto mix-blend-multiply" />
         </Link>
 
         <nav className="hidden md:flex items-center gap-10">
@@ -47,13 +47,13 @@ const Header = () => {
 
       {menuOpen && (
         <div className="md:hidden bg-background/95 backdrop-blur-md border-b border-border animate-fade-in">
-          <nav className="flex flex-col items-center gap-6 py-8">
+          <nav className="flex flex-col items-center gap-8 py-10">
             {navItems.map((item) => (
               <Link
                 key={item.path}
                 to={item.path}
                 onClick={() => setMenuOpen(false)}
-                className={`font-body text-sm tracking-widest uppercase transition-colors duration-300 ${
+                className={`font-body text-base tracking-widest uppercase transition-colors duration-300 ${
                   location.pathname === item.path
                     ? "text-primary font-semibold"
                     : "text-foreground/70 hover:text-primary"

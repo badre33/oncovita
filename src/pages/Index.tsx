@@ -11,12 +11,12 @@ const Index = () => {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="relative min-h-[90vh] flex items-center">
+      <section className="relative min-h-[85vh] md:min-h-[90vh] flex items-center">
         <div className="absolute inset-0">
           <img src={heroImage} alt="Intérieur du centre Oncovita" className="w-full h-full object-cover" loading="eager" />
-          <div className="absolute inset-0 bg-gradient-to-r from-foreground/80 via-foreground/60 to-foreground/20" />
+          <div className="absolute inset-0 bg-gradient-to-r from-foreground/85 via-foreground/65 to-foreground/30 md:from-foreground/80 md:via-foreground/60 md:to-foreground/20" />
         </div>
-        <div className="relative container-oncovita px-6 lg:px-20 py-20">
+        <div className="relative container-oncovita px-5 md:px-6 lg:px-20 py-16 md:py-20">
           <div className="max-w-2xl">
             <AnimatedSection>
               <p className="font-body text-xs tracking-[0.3em] uppercase text-teal-light mb-6">
@@ -24,12 +24,12 @@ const Index = () => {
               </p>
             </AnimatedSection>
             <AnimatedSection delay={200}>
-              <h1 className="font-display text-4xl md:text-5xl lg:text-6xl text-primary-foreground leading-tight mb-6">
+              <h1 className="font-display text-3xl md:text-5xl lg:text-6xl text-primary-foreground leading-tight mb-4 md:mb-6">
                 Soigner le corps, apaiser l'esprit, accompagner avec humanité.
               </h1>
             </AnimatedSection>
             <AnimatedSection delay={400}>
-              <p className="font-body text-primary-foreground/70 text-lg md:text-xl leading-relaxed mb-10 max-w-xl">
+              <p className="font-body text-primary-foreground/70 text-base md:text-xl leading-relaxed mb-8 md:mb-10 max-w-xl">
                 Oncovita est un centre médical dédié à l'accompagnement des patients atteints de cancer, 
                 alliant médecine oncologique fondée sur les preuves scientifiques et accompagnement global du patient.
               </p>
