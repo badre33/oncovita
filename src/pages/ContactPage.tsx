@@ -30,7 +30,7 @@ const ContactPage = () => {
         <div className="container-oncovita text-center max-w-3xl mx-auto">
           <AnimatedSection>
             <p className="font-body text-xs tracking-[0.3em] uppercase text-primary mb-4">Contact</p>
-            <h1 className="font-display text-4xl md:text-5xl text-foreground mb-6">
+            <h1 className="font-display text-3xl md:text-5xl text-foreground mb-4 md:mb-6">
               Nous sommes là pour vous
             </h1>
             <p className="font-body text-muted-foreground leading-relaxed text-lg">
