@@ -12,10 +12,10 @@ const Footer = () => {
               Soigner le corps, apaiser l'esprit, nourrir l'espoir.
             </p>
             <div className="flex gap-4">
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-primary-foreground/50 hover:text-primary transition-colors" aria-label="Instagram">
+              <a href="https://www.instagram.com/oncovita_/" target="_blank" rel="noopener noreferrer" className="text-primary-foreground/50 hover:text-primary transition-colors" aria-label="Instagram">
                 <Instagram size={20} />
               </a>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-primary-foreground/50 hover:text-primary transition-colors" aria-label="LinkedIn">
+              <a href="https://www.linkedin.com/company/oncovita/" target="_blank" rel="noopener noreferrer" className="text-primary-foreground/50 hover:text-primary transition-colors" aria-label="LinkedIn">
                 <Linkedin size={20} />
               </a>
               <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-primary-foreground/50 hover:text-primary transition-colors" aria-label="Facebook">
