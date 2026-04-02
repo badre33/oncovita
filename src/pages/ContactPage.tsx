@@ -33,7 +33,7 @@ const ContactPage = () => {
             <h1 className="font-display text-3xl md:text-5xl text-foreground mb-4 md:mb-6">
               Nous sommes là pour vous
             </h1>
-            <p className="font-body text-muted-foreground leading-relaxed text-lg">
+            <p className="font-body text-muted-foreground leading-relaxed text-base md:text-lg">
               Notre équipe est à votre écoute pour vous guider et vous accompagner. 
               N'hésitez pas à nous contacter pour toute information ou pour prendre rendez-vous.
             </p>

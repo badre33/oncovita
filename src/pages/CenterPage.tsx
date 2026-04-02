@@ -33,7 +33,7 @@ const CenterPage = () => {
         <div className="relative container-oncovita px-5 md:px-6 lg:px-20">
           <AnimatedSection>
             <p className="font-body text-xs tracking-[0.3em] uppercase text-teal-light mb-4">Oncovita</p>
-            <h1 className="font-display text-4xl md:text-5xl lg:text-6xl text-primary-foreground max-w-2xl">
+            <h1 className="font-display text-3xl md:text-5xl lg:text-6xl text-primary-foreground max-w-2xl">
               Le Centre
             </h1>
             <p className="font-body text-primary-foreground/70 text-lg mt-4 max-w-xl">
