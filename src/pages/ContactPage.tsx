@@ -179,14 +179,14 @@ const ContactPage = () => {
           <AnimatedSection>
             <div className="rounded-2xl overflow-hidden shadow-card h-96">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d106376.72691864977!2d-7.669863499999999!3d33.57226785!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda7cd4778aa113b%3A0xb06c1d84f310fd3!2sCasablanca%2C%20Morocco!5e0!3m2!1sfr!2sma!4v1710000000000!5m2!1sfr!2sma"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3324.5!2d-7.6!3d33.56!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda62d9965d6e9b3%3A0x6f186776a8d16c92!2sOncovita!5e0!3m2!1sfr!2sma"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="Localisation Oncovita à Casablanca"
+                title="Localisation Oncovita — 401 Rte d'El Jadida, Casablanca"
               />
             </div>
           </AnimatedSection>
