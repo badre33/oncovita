@@ -145,7 +145,7 @@ const ContactPage = () => {
                     </div>
                     <div>
                       <p className="font-body text-xs tracking-widest uppercase text-muted-foreground mb-1">Adresse</p>
-                      <p className="font-body text-foreground">Casablanca, Maroc</p>
+                      <p className="font-body text-foreground">5ème étage, Immeuble FIRST, 401 Rte d'El Jadida, Casablanca 20000</p>
                     </div>
                   </div>
 
