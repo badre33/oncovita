@@ -11,12 +11,12 @@ const Index = () => {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="relative min-h-[90vh] flex items-center">
+      <section className="relative min-h-[85vh] md:min-h-[90vh] flex items-center">
         <div className="absolute inset-0">
           <img src={heroImage} alt="Intérieur du centre Oncovita" className="w-full h-full object-cover" loading="eager" />
-          <div className="absolute inset-0 bg-gradient-to-r from-foreground/80 via-foreground/60 to-foreground/20" />
+          <div className="absolute inset-0 bg-gradient-to-r from-foreground/85 via-foreground/65 to-foreground/30 md:from-foreground/80 md:via-foreground/60 md:to-foreground/20" />
         </div>
-        <div className="relative container-oncovita px-6 lg:px-20 py-20">
+        <div className="relative container-oncovita px-5 md:px-6 lg:px-20 py-16 md:py-20">
           <div className="max-w-2xl">
             <AnimatedSection>
               <p className="font-body text-xs tracking-[0.3em] uppercase text-teal-light mb-6">
