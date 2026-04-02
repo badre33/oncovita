@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Mail, Phone, MapPin, Send, Instagram, Linkedin, Facebook } from "lucide-react";
+import { Mail, Phone, MapPin, Send, Instagram, Linkedin, Facebook, Clock } from "lucide-react";
 import Layout from "@/components/Layout";
 import AnimatedSection from "@/components/AnimatedSection";
 import { Button } from "@/components/ui/button";
