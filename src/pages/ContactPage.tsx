@@ -152,11 +152,11 @@ const ContactPage = () => {
                   <div className="pt-6 border-t border-border">
                     <p className="font-body text-xs tracking-widest uppercase text-muted-foreground mb-4">Suivez-nous</p>
                     <div className="flex gap-4">
-                      <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"
+                      <a href="https://www.instagram.com/oncovita_/" target="_blank" rel="noopener noreferrer"
                         className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary hover:bg-primary hover:text-primary-foreground transition-all" aria-label="Instagram">
                         <Instagram size={18} />
                       </a>
-                      <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"
+                      <a href="https://www.linkedin.com/company/oncovita/" target="_blank" rel="noopener noreferrer"
                         className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary hover:bg-primary hover:text-primary-foreground transition-all" aria-label="LinkedIn">
                         <Linkedin size={18} />
                       </a>
