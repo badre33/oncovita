@@ -119,13 +119,13 @@ const ContactPage = () => {
               <AnimatedSection delay={200}>
                 <h2 className="font-display text-2xl md:text-3xl text-foreground mb-8">Coordonnées</h2>
                 <div className="space-y-8">
-                  <a href="tel:+212500000000" className="flex items-start gap-4 group">
+                  <a href="tel:+212522980719" className="flex items-start gap-4 group">
                     <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center shrink-0 group-hover:bg-primary/20 transition-colors">
                       <Phone size={18} className="text-primary" />
                     </div>
                     <div>
                       <p className="font-body text-xs tracking-widest uppercase text-muted-foreground mb-1">Téléphone</p>
-                      <p className="font-body text-foreground">+212 5 00 00 00 00</p>
+                      <p className="font-body text-foreground">+212 5 22 98 07 19</p>
                     </div>
                   </a>
 
