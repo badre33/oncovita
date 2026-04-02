@@ -24,7 +24,7 @@ const Index = () => {
               </p>
             </AnimatedSection>
             <AnimatedSection delay={200}>
-              <h1 className="font-display text-4xl md:text-5xl lg:text-6xl text-primary-foreground leading-tight mb-6">
+              <h1 className="font-display text-3xl md:text-5xl lg:text-6xl text-primary-foreground leading-tight mb-4 md:mb-6">
                 Soigner le corps, apaiser l'esprit, accompagner avec humanité.
               </h1>
             </AnimatedSection>
