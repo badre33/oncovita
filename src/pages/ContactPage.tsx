@@ -149,6 +149,17 @@ const ContactPage = () => {
                     </div>
                   </div>
 
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
+                      <Clock size={18} className="text-primary" />
+                    </div>
+                    <div>
+                      <p className="font-body text-xs tracking-widest uppercase text-muted-foreground mb-1">Horaires</p>
+                      <p className="font-body text-foreground text-sm">Lun – Ven : 8h30 – 12h30 / 13h30 – 17h30</p>
+                      <p className="font-body text-muted-foreground text-sm">Sam – Dim : Fermé</p>
+                    </div>
+                  </div>
+
                   <div className="pt-6 border-t border-border">
                     <p className="font-body text-xs tracking-widest uppercase text-muted-foreground mb-4">Suivez-nous</p>
                     <div className="flex gap-4">
