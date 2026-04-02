@@ -15,10 +15,10 @@ const Footer = () => {
               <a href="https://www.instagram.com/oncovita_/" target="_blank" rel="noopener noreferrer" className="text-primary-foreground/50 hover:text-primary transition-colors" aria-label="Instagram">
                 <Instagram size={20} />
               </a>
-              <a href="https://www.linkedin.com/company/oncovita/" target="_blank" rel="noopener noreferrer" className="text-primary-foreground/50 hover:text-primary transition-colors" aria-label="LinkedIn">
+              <a href="https://www.linkedin.com/company/oncovita-ma" target="_blank" rel="noopener noreferrer" className="text-primary-foreground/50 hover:text-primary transition-colors" aria-label="LinkedIn">
                 <Linkedin size={20} />
               </a>
-              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-primary-foreground/50 hover:text-primary transition-colors" aria-label="Facebook">
+              <a href="https://web.facebook.com/profile.php?id=61586513205244" target="_blank" rel="noopener noreferrer" className="text-primary-foreground/50 hover:text-primary transition-colors" aria-label="Facebook">
                 <Facebook size={20} />
               </a>
             </div>
