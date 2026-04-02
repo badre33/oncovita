@@ -167,11 +167,11 @@ const ContactPage = () => {
                         className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary hover:bg-primary hover:text-primary-foreground transition-all" aria-label="Instagram">
                         <Instagram size={18} />
                       </a>
-                      <a href="https://www.linkedin.com/company/oncovita/" target="_blank" rel="noopener noreferrer"
+                      <a href="https://www.linkedin.com/company/oncovita-ma" target="_blank" rel="noopener noreferrer"
                         className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary hover:bg-primary hover:text-primary-foreground transition-all" aria-label="LinkedIn">
                         <Linkedin size={18} />
                       </a>
-                      <a href="https://facebook.com" target="_blank" rel="noopener noreferrer"
+                      <a href="https://web.facebook.com/profile.php?id=61586513205244" target="_blank" rel="noopener noreferrer"
                         className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary hover:bg-primary hover:text-primary-foreground transition-all" aria-label="Facebook">
                         <Facebook size={18} />
                       </a>
