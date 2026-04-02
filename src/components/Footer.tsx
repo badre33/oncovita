@@ -36,9 +36,9 @@ const Footer = () => {
           <div>
             <h4 className="font-body text-sm tracking-widest uppercase mb-6 text-primary-foreground/80">Contact</h4>
             <div className="flex flex-col gap-4">
-              <a href="tel:+212500000000" className="flex items-center gap-3 text-primary-foreground/50 hover:text-primary-foreground transition-colors text-sm font-body">
+              <a href="tel:+212522980719" className="flex items-center gap-3 text-primary-foreground/50 hover:text-primary-foreground transition-colors text-sm font-body">
                 <Phone size={16} />
-                +212 5 00 00 00 00
+                +212 5 22 98 07 19
               </a>
               <a href="mailto:contact@oncovita.ma" className="flex items-center gap-3 text-primary-foreground/50 hover:text-primary-foreground transition-colors text-sm font-body">
                 <Mail size={16} />
@@ -46,7 +46,7 @@ const Footer = () => {
               </a>
               <div className="flex items-start gap-3 text-primary-foreground/50 text-sm font-body">
                 <MapPin size={16} className="mt-0.5 shrink-0" />
-                Casablanca, Maroc
+                5ème étage, Immeuble FIRST, 401 Rte d'El Jadida, Casablanca 20000
               </div>
             </div>
           </div>
