@@ -167,7 +167,7 @@ export const blogPosts: BlogPost[] = [
     subtitle: "Préserver l'équilibre physique et émotionnel pendant le parcours de soin",
     category: "Accompagnement",
     image: blogWellbeing,
-    imageAlt: "Tasse de tisane sur un plateau en bois avec une couverture douce",
+    imageAlt: "Personne reposant paisiblement dans une lumière douce, moment de repos pendant le traitement",
     date: "2026-05-08",
     readingTime: "5 min",
     metaDescription:
@@ -294,7 +294,7 @@ export const blogPosts: BlogPost[] = [
     subtitle: "Soutenir le patient au-delà de la maladie",
     category: "Accompagnement",
     image: blogEmotional,
-    imageAlt: "Bouquet de lavande séchée et tasses de tisane sur un lin crème",
+    imageAlt: "Deux mains qui se tiennent avec douceur, geste de soutien émotionnel",
     date: "2026-05-08",
     readingTime: "5 min",
     metaDescription:
