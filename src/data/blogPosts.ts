@@ -1,6 +1,9 @@
 import blogIntegrative from "@/assets/blog-integrative.jpg";
 import blogPrevention from "@/assets/blog-prevention.jpg";
 import blogWellbeing from "@/assets/blog-wellbeing.jpg";
+import blogActivity from "@/assets/blog-activity.jpg";
+import blogEmotional from "@/assets/blog-emotional.jpg";
+import blogSoignerAutrement from "@/assets/blog-soigner-autrement.jpg";
 
 export type BlogCategory = "Regard Médical" | "Sensibilisation" | "Accompagnement";
 
