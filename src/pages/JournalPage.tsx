@@ -5,6 +5,7 @@ import Layout from "@/components/Layout";
 import AnimatedSection from "@/components/AnimatedSection";
 import { Button } from "@/components/ui/button";
 import { blogPosts } from "@/data/blogPosts";
+import { applySeo } from "@/lib/seo";
 
 const categoryStyles: Record<string, string> = {
   "Regard Médical": "bg-primary/10 text-primary",
@@ -14,21 +15,25 @@ const categoryStyles: Record<string, string> = {
 
 const JournalPage = () => {
   useEffect(() => {
-    document.title = "Journal Oncovita — Oncologie intégrative, prévention & accompagnement";
-    const setMeta = (name: string, content: string) => {
-      let tag = document.querySelector(`meta[name="${name}"]`) as HTMLMetaElement | null;
-      if (!tag) {
-        tag = document.createElement("meta");
-        tag.setAttribute("name", name);
-        document.head.appendChild(tag);
-      }
-      tag.setAttribute("content", content);
-    };
-    setMeta(
-      "description",
-      "Le Journal d'Oncovita : articles d'expertise sur l'oncologie intégrative, la prévention du cancer et l'accompagnement des patients à Casablanca.",
-    );
+    applySeo({
+      title:
+        "Journal Oncovita — Oncologie intégrative, prévention & accompagnement à Casablanca",
+      description:
+        "Le Journal d'Oncovita : articles d'expertise sur l'oncologie intégrative, la prévention du cancer et l'accompagnement humain des patients à Casablanca.",
+      keywords: [
+        "journal oncologie Maroc",
+        "oncologie intégrative Casablanca",
+        "prévention cancer Maroc",
+        "accompagnement patient cancer",
+        "Oncovita",
+      ],
+      url: "/journal",
+      image: blogPosts[0]?.image,
+      imageAlt: blogPosts[0]?.imageAlt,
+      type: "website",
+    });
   }, []);
+
 
   return (
     <Layout>

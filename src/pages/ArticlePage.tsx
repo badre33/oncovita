@@ -5,6 +5,7 @@ import Layout from "@/components/Layout";
 import AnimatedSection from "@/components/AnimatedSection";
 import { Button } from "@/components/ui/button";
 import { getPostBySlug, getRelatedPosts, blogPosts } from "@/data/blogPosts";
+import { applySeo } from "@/lib/seo";
 
 const formatDate = (iso: string) =>
   new Date(iso).toLocaleDateString("fr-FR", {
@@ -19,18 +20,38 @@ const ArticlePage = () => {
 
   useEffect(() => {
     if (!post) return;
-    document.title = `${post.title} — Journal Oncovita`;
-    const setMeta = (name: string, content: string) => {
-      let tag = document.querySelector(`meta[name="${name}"]`) as HTMLMetaElement | null;
+    applySeo({
+      title: `${post.title} — Journal Oncovita`,
+      description: post.metaDescription,
+      keywords: post.keywords,
+      url: `/journal/${post.slug}`,
+      image: post.image,
+      imageAlt: post.imageAlt,
+      type: "article",
+    });
+
+    // Article-specific Open Graph tags
+    const setProp = (property: string, content: string) => {
+      let tag = document.head.querySelector(
+        `meta[property="${property}"]`,
+      ) as HTMLMetaElement | null;
       if (!tag) {
         tag = document.createElement("meta");
-        tag.setAttribute("name", name);
+        tag.setAttribute("property", property);
         document.head.appendChild(tag);
       }
       tag.setAttribute("content", content);
     };
-    setMeta("description", post.metaDescription);
-    setMeta("keywords", post.keywords.join(", "));
+    setProp("article:published_time", post.date);
+    setProp("article:author", "Dr Malak Rita Hajji");
+    setProp("article:section", post.category);
+    post.keywords.forEach((kw) => {
+      const t = document.createElement("meta");
+      t.setAttribute("property", "article:tag");
+      t.setAttribute("content", kw);
+      t.setAttribute("data-article-tag", "true");
+      document.head.appendChild(t);
+    });
 
     // JSON-LD Article structured data
     const ld = document.createElement("script");
@@ -41,21 +62,33 @@ const ArticlePage = () => {
       headline: post.title,
       description: post.metaDescription,
       datePublished: post.date,
+      dateModified: post.date,
       author: { "@type": "Person", name: "Dr Malak Rita Hajji" },
       publisher: {
         "@type": "Organization",
         name: "Oncovita",
         logo: { "@type": "ImageObject", url: "https://oncovita.ma/logo.png" },
       },
-      image: `https://oncovita.ma${post.image}`,
+      image: {
+        "@type": "ImageObject",
+        url: `https://oncovita.ma${post.image}`,
+        caption: post.imageAlt,
+      },
+      keywords: post.keywords.join(", "),
+      articleSection: post.category,
+      inLanguage: "fr-FR",
       mainEntityOfPage: `https://oncovita.ma/journal/${post.slug}`,
     });
     ld.id = "ld-article";
     document.head.appendChild(ld);
     return () => {
       document.getElementById("ld-article")?.remove();
+      document
+        .querySelectorAll('meta[data-article-tag="true"]')
+        .forEach((el) => el.remove());
     };
   }, [post]);
+
 
   const handleShare = async () => {
     if (!post) return;
