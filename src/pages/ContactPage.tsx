@@ -4,6 +4,7 @@ import Layout from "@/components/Layout";
 import AnimatedSection from "@/components/AnimatedSection";
 import { Button } from "@/components/ui/button";
 import { toast } from "sonner";
+import terrasseOncovita from "@/assets/terrasse-oncovita.jpg";
 
 const ContactPage = () => {
   const [formData, setFormData] = useState({ name: "", email: "", phone: "", message: "" });
@@ -26,14 +27,18 @@ const ContactPage = () => {
   return (
     <Layout>
       {/* Hero */}
-      <section className="section-padding gradient-warm">
-        <div className="container-oncovita text-center max-w-3xl mx-auto">
+      <section className="relative h-[45vh] md:h-[55vh] flex items-center">
+        <div className="absolute inset-0">
+          <img src={terrasseOncovita} alt="Terrasse Oncovita" className="w-full h-full object-cover" loading="eager" />
+          <div className="absolute inset-0 bg-gradient-to-r from-foreground/90 via-foreground/75 to-foreground/45" />
+        </div>
+        <div className="relative container-oncovita px-5 md:px-6 lg:px-20 text-center max-w-3xl mx-auto">
           <AnimatedSection>
-            <p className="font-body text-xs tracking-[0.3em] uppercase text-primary mb-4">Contact</p>
-            <h1 className="font-display text-3xl md:text-5xl text-foreground mb-4 md:mb-6">
+            <p className="font-body text-xs tracking-[0.3em] uppercase text-teal-light mb-4">Contact</p>
+            <h1 className="font-display text-3xl md:text-5xl text-primary-foreground mb-4 md:mb-6 drop-shadow-[0_2px_8px_rgba(0,0,0,0.5)]">
               Nous sommes là pour vous
             </h1>
-            <p className="font-body text-muted-foreground leading-relaxed text-base md:text-lg">
+            <p className="font-body text-primary-foreground leading-relaxed text-base md:text-lg drop-shadow-[0_2px_8px_rgba(0,0,0,0.5)]">
               Notre équipe est à votre écoute pour vous guider et vous accompagner. 
               N'hésitez pas à nous contacter pour toute information ou pour prendre rendez-vous.
             </p>
