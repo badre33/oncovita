@@ -6,6 +6,7 @@ import logoOncovita from "@/assets/logo-oncovita.png";
 const navItems = [
   { label: "Accueil", path: "/" },
   { label: "Le Centre", path: "/center" },
+  { label: "Journal", path: "/journal" },
   { label: "Contact", path: "/contact" },
 ];
 
