@@ -374,20 +374,42 @@ const CenterPage = () => {
           </AnimatedSection>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              { title: "Comprendre l'Oncologie Intégrative", category: "Regard Médical", desc: "Comment la combinaison des traitements conventionnels avec les soins de support améliore les résultats et la qualité de vie des patients." },
-              { title: "Sensibilisation et Prévention du Cancer", category: "Sensibilisation", desc: "Les faits essentiels sur le dépistage précoce, les programmes de prévention et les choix de vie qui font la différence." },
-              { title: "Bien-être du Patient pendant le Traitement", category: "Accompagnement", desc: "Des conseils pratiques pour maintenir le bien-être physique et émotionnel tout au long du parcours de soins." },
-            ].map((post, i) => (
-              <AnimatedSection key={post.title} delay={i * 150}>
-                <div className="bg-card rounded-2xl p-8 shadow-soft hover-lift h-full flex flex-col">
-                  <p className="font-body text-xs tracking-widest uppercase text-primary mb-4">{post.category}</p>
-                  <h3 className="font-display text-xl text-foreground mb-3">{post.title}</h3>
-                  <p className="font-body text-sm text-muted-foreground leading-relaxed flex-1">{post.desc}</p>
-                  <p className="font-body text-xs text-primary mt-6 tracking-wider uppercase">Bientôt disponible</p>
-                </div>
+            {blogPosts.slice(0, 3).map((post, i) => (
+              <AnimatedSection key={post.slug} delay={i * 150}>
+                <Link
+                  to={`/journal/${post.slug}`}
+                  className="group block bg-card rounded-2xl overflow-hidden shadow-soft hover-lift h-full"
+                >
+                  <div className="aspect-[4/3] overflow-hidden">
+                    <img
+                      src={post.image}
+                      alt={post.imageAlt}
+                      loading="lazy"
+                      width={1280}
+                      height={960}
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    />
+                  </div>
+                  <div className="p-7 flex flex-col">
+                    <p className="font-body text-xs tracking-widest uppercase text-primary mb-4">{post.category}</p>
+                    <h3 className="font-display text-xl text-foreground mb-3 group-hover:text-primary transition-colors">{post.title}</h3>
+                    <p className="font-body text-sm text-muted-foreground leading-relaxed flex-1">{post.excerpt}</p>
+                    <span className="inline-flex items-center gap-2 text-primary font-body text-xs mt-6 tracking-wider uppercase">
+                      Lire l'article <ArrowRight size={12} />
+                    </span>
+                  </div>
+                </Link>
               </AnimatedSection>
             ))}
+          </div>
+
+          <div className="text-center mt-12">
+            <Link
+              to="/journal"
+              className="inline-flex items-center gap-2 font-body text-sm tracking-wider uppercase text-primary hover:text-accent transition-colors"
+            >
+              Découvrir tout le Journal <ArrowRight size={14} />
+            </Link>
           </div>
         </div>
       </section>
