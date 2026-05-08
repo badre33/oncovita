@@ -1,6 +1,8 @@
-import { Heart, Shield, Microscope, Brain, Eye, Clock, Users, Activity, Dumbbell } from "lucide-react";
+import { Heart, Shield, Microscope, Brain, Eye, Clock, Users, Activity, Dumbbell, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 import Layout from "@/components/Layout";
 import AnimatedSection from "@/components/AnimatedSection";
+import { blogPosts } from "@/data/blogPosts";
 import centerExterior from "@/assets/center-exterior.jpg";
 import consultationRoom from "@/assets/consultation-room.jpg";
 import bureauConsultation from "@/assets/bureau-consultation.jpg";
