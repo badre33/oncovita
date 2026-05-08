@@ -36,7 +36,7 @@ export const blogPosts: BlogPost[] = [
     subtitle: "Une approche globale du soin au service du patient",
     category: "Regard Médical",
     image: blogIntegrative,
-    imageAlt: "Lumière douce et branche végétale évoquant l'oncologie intégrative",
+    imageAlt: "Oncologie intégrative à Casablanca : approche globale du cancer combinant médecine et soins de support",
     date: "2026-05-08",
     readingTime: "5 min",
     metaDescription:
@@ -104,7 +104,7 @@ export const blogPosts: BlogPost[] = [
     subtitle: "Sensibilisation et prévention du cancer",
     category: "Sensibilisation",
     image: blogPrevention,
-    imageAlt: "Ruban rose délicat sur un lin crème, symbole de prévention",
+    imageAlt: "Dépistage précoce du cancer au Maroc : prévention et sensibilisation pour sauver des vies",
     date: "2026-05-08",
     readingTime: "4 min",
     metaDescription:
@@ -167,7 +167,7 @@ export const blogPosts: BlogPost[] = [
     subtitle: "Préserver l'équilibre physique et émotionnel pendant le parcours de soin",
     category: "Accompagnement",
     image: blogWellbeing,
-    imageAlt: "Personne reposant paisiblement dans une lumière douce, moment de repos pendant le traitement",
+    imageAlt: "Bien-être du patient pendant le traitement du cancer : repos et préservation de l'énergie au quotidien",
     date: "2026-05-08",
     readingTime: "5 min",
     metaDescription:
@@ -231,7 +231,7 @@ export const blogPosts: BlogPost[] = [
     subtitle: "Bouger autrement pendant et après le cancer",
     category: "Accompagnement",
     image: blogActivity,
-    imageAlt: "Personne marchant doucement dans un parc baigné de lumière",
+    imageAlt: "Activité physique adaptée en oncologie : marche douce et mouvement personnalisé pendant le cancer",
     date: "2026-05-08",
     readingTime: "5 min",
     metaDescription:
@@ -294,7 +294,7 @@ export const blogPosts: BlogPost[] = [
     subtitle: "Soutenir le patient au-delà de la maladie",
     category: "Accompagnement",
     image: blogEmotional,
-    imageAlt: "Deux mains qui se tiennent avec douceur, geste de soutien émotionnel",
+    imageAlt: "Accompagnement émotionnel en oncologie : soutien psychologique et présence humaine pour les patients",
     date: "2026-05-08",
     readingTime: "5 min",
     metaDescription:
@@ -353,7 +353,7 @@ export const blogPosts: BlogPost[] = [
     subtitle: "Une médecine plus humaine, plus globale, plus à l'écoute",
     category: "Regard Médical",
     image: blogSoignerAutrement,
-    imageAlt: "Carnet ouvert, herbes fraîches et bougie évoquant un soin différent",
+    imageAlt: "Soigner autrement : médecine intégrative et humaine au cœur du parcours du patient chez Oncovita",
     date: "2026-05-08",
     readingTime: "5 min",
     metaDescription:
