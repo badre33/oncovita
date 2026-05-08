@@ -8,6 +8,7 @@ import ContactPage from "./pages/ContactPage.tsx";
 import JournalPage from "./pages/JournalPage.tsx";
 import ArticlePage from "./pages/ArticlePage.tsx";
 import NotFound from "./pages/NotFound.tsx";
+import ScrollToTop from "./components/ScrollToTop";
 
 const queryClient = new QueryClient();
 
@@ -16,6 +17,7 @@ const App = () => (
     <TooltipProvider>
       <Sonner />
       <BrowserRouter>
+        <ScrollToTop />
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/center" element={<CenterPage />} />
