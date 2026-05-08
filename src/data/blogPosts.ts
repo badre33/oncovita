@@ -1,6 +1,9 @@
 import blogIntegrative from "@/assets/blog-integrative.jpg";
 import blogPrevention from "@/assets/blog-prevention.jpg";
 import blogWellbeing from "@/assets/blog-wellbeing.jpg";
+import blogActivity from "@/assets/blog-activity.jpg";
+import blogEmotional from "@/assets/blog-emotional.jpg";
+import blogSoignerAutrement from "@/assets/blog-soigner-autrement.jpg";
 
 export type BlogCategory = "Regard Médical" | "Sensibilisation" | "Accompagnement";
 
@@ -219,6 +222,184 @@ export const blogPosts: BlogPost[] = [
       {
         type: "quote",
         text: "Soigner tout en préservant ce qui reste profondément vivant : l'énergie, la dignité, le lien aux autres et la capacité d'avancer à son rythme.",
+      },
+    ],
+  },
+  {
+    slug: "activite-physique-adaptee-cancer",
+    title: "L'activité physique adaptée : un soin à part entière",
+    subtitle: "Bouger autrement pendant et après le cancer",
+    category: "Accompagnement",
+    image: blogActivity,
+    imageAlt: "Personne marchant doucement dans un parc baigné de lumière",
+    date: "2026-05-08",
+    readingTime: "5 min",
+    metaDescription:
+      "Activité physique adaptée et cancer : pourquoi bouger, même doucement, fait partie intégrante du parcours de soin. Bénéfices, encadrement, conseils.",
+    keywords: [
+      "activité physique adaptée cancer",
+      "APA oncologie Maroc",
+      "sport et cancer Casablanca",
+      "réhabilitation cancer",
+    ],
+    excerpt:
+      "Longtemps perçu comme un effort réservé aux personnes en pleine santé, le mouvement est aujourd'hui reconnu comme un véritable allié du parcours de soin.",
+    content: [
+      {
+        type: "p",
+        text: "Pendant longtemps, le repos a été présenté comme la principale réponse à la fatigue liée au cancer. Aujourd'hui, les recherches ont changé ce regard. L'activité physique adaptée (APA), pratiquée dans un cadre sécurisé et personnalisé, est désormais reconnue comme un véritable soin de support.",
+      },
+      {
+        type: "p",
+        text: "Il ne s'agit pas de performance ni d'effort intense, mais de mouvement choisi, encadré et respectueux du rythme de chaque patient.",
+      },
+      { type: "h2", text: "Pourquoi bouger pendant et après un cancer ?" },
+      {
+        type: "p",
+        text: "L'activité physique adaptée peut contribuer à :",
+      },
+      {
+        type: "ul",
+        items: [
+          "Réduire la fatigue liée aux traitements",
+          "Préserver la masse musculaire et la mobilité",
+          "Améliorer la qualité du sommeil",
+          "Soutenir le moral et diminuer l'anxiété",
+          "Favoriser la récupération après les traitements",
+        ],
+      },
+      {
+        type: "p",
+        text: "Plusieurs études montrent que la pratique régulière d'une activité adaptée peut également améliorer la tolérance aux traitements.",
+      },
+      { type: "h2", text: "Une activité toujours personnalisée" },
+      {
+        type: "p",
+        text: "Il n'existe pas une seule façon de bouger. Tout dépend de l'état général, du type de cancer, de la phase du traitement et des envies du patient. Marche douce, exercices respiratoires, étirements, renforcement progressif : chaque programme est construit sur mesure et accompagné par un professionnel formé.",
+      },
+      { type: "h2", text: "Une approche essentielle chez Oncovita" },
+      {
+        type: "p",
+        text: "Chez Oncovita, l'activité physique adaptée fait partie intégrante du parcours de soin. Elle permet aux patients de retrouver, à leur rythme, une relation apaisée avec leur corps.",
+      },
+      {
+        type: "quote",
+        text: "Bouger, ce n'est pas forcer. C'est se réapproprier son corps, en douceur.",
+      },
+    ],
+  },
+  {
+    slug: "accompagnement-emotionnel-cancer",
+    title: "L'accompagnement émotionnel : prendre soin de l'invisible",
+    subtitle: "Soutenir le patient au-delà de la maladie",
+    category: "Accompagnement",
+    image: blogEmotional,
+    imageAlt: "Bouquet de lavande séchée et tasses de tisane sur un lin crème",
+    date: "2026-05-08",
+    readingTime: "5 min",
+    metaDescription:
+      "Anxiété, peur, isolement : pourquoi l'accompagnement émotionnel est essentiel pendant un cancer, et comment Oncovita l'intègre au parcours de soin.",
+    keywords: [
+      "soutien psychologique cancer",
+      "accompagnement émotionnel cancer Maroc",
+      "psycho-oncologie Casablanca",
+      "anxiété cancer",
+    ],
+    excerpt:
+      "Annoncer un diagnostic de cancer ne touche pas seulement le corps : la maladie ébranle aussi l'équilibre émotionnel et la perception de soi.",
+    content: [
+      {
+        type: "p",
+        text: "Annoncer un diagnostic de cancer ne touche jamais seulement le corps. La maladie ébranle aussi l'équilibre émotionnel, le rapport au temps, à soi-même et aux autres. De nombreux patients décrivent un mélange de peur, de colère, de tristesse, de doute, parfois de solitude.",
+      },
+      {
+        type: "p",
+        text: "Ces émotions sont normales. Elles font partie du parcours. Pourtant, elles restent souvent peu exprimées, soit par pudeur, soit par crainte d'inquiéter les proches.",
+      },
+      { type: "h2", text: "Pourquoi parler fait du bien" },
+      {
+        type: "p",
+        text: "Mettre des mots sur ce que l'on traverse permet d'alléger une partie de la charge mentale liée à la maladie. L'accompagnement émotionnel ne consiste pas à effacer les émotions difficiles, mais à les accueillir et à les traverser sans rester seul.",
+      },
+      { type: "h2", text: "Les formes que peut prendre cet accompagnement" },
+      {
+        type: "ul",
+        items: [
+          "Des entretiens avec un psychologue formé à l'oncologie",
+          "Des groupes de parole entre patients",
+          "Des séances de relaxation, de sophrologie ou de méditation",
+          "Un accompagnement des proches et des aidants",
+        ],
+      },
+      { type: "h2", text: "Soutenir aussi les proches" },
+      {
+        type: "p",
+        text: "La maladie touche également l'entourage. Conjoint, enfants, parents : eux aussi traversent des émotions complexes. Leur offrir un espace d'écoute fait partie d'une prise en charge réellement globale.",
+      },
+      { type: "h2", text: "Une dimension essentielle chez Oncovita" },
+      {
+        type: "p",
+        text: "Chez Oncovita, nous considérons que prendre soin du corps ne suffit pas. L'accompagnement émotionnel est une part entière de notre approche intégrative.",
+      },
+      {
+        type: "quote",
+        text: "Soigner, c'est aussi écouter ce qui ne se voit pas.",
+      },
+    ],
+  },
+  {
+    slug: "soigner-autrement-medecine-integrative",
+    title: "Soigner autrement : repenser la place du patient dans le soin",
+    subtitle: "Une médecine plus humaine, plus globale, plus à l'écoute",
+    category: "Regard Médical",
+    image: blogSoignerAutrement,
+    imageAlt: "Carnet ouvert, herbes fraîches et bougie évoquant un soin différent",
+    date: "2026-05-08",
+    readingTime: "5 min",
+    metaDescription:
+      "Soigner autrement, ce n'est pas soigner moins. Découvrez la vision intégrative et humaine du soin défendue par Oncovita à Casablanca.",
+    keywords: [
+      "médecine intégrative Maroc",
+      "soigner autrement cancer",
+      "approche humaine du soin",
+      "Oncovita Casablanca",
+    ],
+    excerpt:
+      "Soigner autrement, ce n'est pas soigner moins. C'est replacer le patient au centre du parcours, dans toutes ses dimensions humaines.",
+    content: [
+      {
+        type: "p",
+        text: "Soigner autrement, ce n'est pas soigner moins. C'est soigner plus largement, en gardant la médecine au centre tout en reconnaissant que chaque patient est unique. Pendant longtemps, la médecine a été pensée autour de la maladie. Aujourd'hui, une nouvelle vision émerge : penser le soin autour de la personne.",
+      },
+      { type: "h2", text: "Replacer la personne au centre" },
+      {
+        type: "p",
+        text: "Un patient n'est jamais réductible à un diagnostic, à un protocole ou à une statistique. Derrière chaque parcours, il y a une histoire, un quotidien, des proches, des inquiétudes et des espoirs. Une médecine moderne doit pouvoir tenir compte de cette réalité.",
+      },
+      { type: "h2", text: "Ce que signifie « soigner autrement »" },
+      {
+        type: "ul",
+        items: [
+          "Prendre le temps d'écouter avant de prescrire",
+          "Associer les traitements conventionnels à des soins de support validés",
+          "Considérer le bien-être émotionnel comme partie intégrante du soin",
+          "Accompagner également les proches",
+          "Construire un parcours personnalisé pour chaque patient",
+        ],
+      },
+      { type: "h2", text: "Une médecine rigoureuse et humaine" },
+      {
+        type: "p",
+        text: "Soigner autrement ne s'oppose pas à la médecine conventionnelle. Au contraire : cette approche s'appuie sur les preuves scientifiques et complète les traitements par des dimensions souvent négligées — l'écoute, l'accompagnement, la qualité de vie.",
+      },
+      { type: "h2", text: "La conviction d'Oncovita" },
+      {
+        type: "p",
+        text: "Chez Oncovita, cette vision guide chacun de nos gestes. Nous croyons qu'il est possible d'offrir une médecine d'excellence sans renoncer à l'humanité du soin.",
+      },
+      {
+        type: "quote",
+        text: "Parce qu'au-delà de la maladie, il y a toujours une personne.",
       },
     ],
   },

@@ -34,5 +34,19 @@
     <loc>https://oncovita.ma/journal/bien-etre-patient-traitement</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  <url>
+    <loc>https://oncovita.ma/journal/activite-physique-adaptee-cancer</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://oncovita.ma/journal/accompagnement-emotionnel-cancer</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://oncovita.ma/journal/soigner-autrement-medecine-integrative</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 </urlset>
