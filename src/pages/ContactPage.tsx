@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Mail, Phone, MapPin, Send, Instagram, Linkedin, Facebook, Clock } from "lucide-react";
+import { Mail, Phone, MapPin, Send, Instagram, Linkedin, Facebook, Clock, Navigation } from "lucide-react";
 import Layout from "@/components/Layout";
 import AnimatedSection from "@/components/AnimatedSection";
 import { Button } from "@/components/ui/button";
@@ -184,11 +184,11 @@ const ContactPage = () => {
         </div>
       </section>
 
-      {/* Carte */}
-      <section className="px-6 lg:px-20 pb-20">
+      {/* Carte & Itinéraire */}
+      <section className="px-5 md:px-12 lg:px-20 pb-20">
         <div className="container-oncovita">
           <AnimatedSection>
-            <div className="rounded-2xl overflow-hidden shadow-card h-96">
+            <div className="rounded-2xl overflow-hidden shadow-card h-96 mb-6">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1662.2!2d-7.6322!3d33.5697!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda62d9965d6e9b3%3A0x6f186776a8d16c92!2sOncovita!5e0!3m2!1sfr!2sma!4v1710000000000!5m2!1sfr!2sma"
                 width="100%"
@@ -199,6 +199,23 @@ const ContactPage = () => {
                 referrerPolicy="no-referrer-when-downgrade"
                 title="Localisation Oncovita — 401 Rte d'El Jadida, Casablanca"
               />
+            </div>
+            <div className="flex flex-wrap gap-3 justify-center">
+              <Button variant="hero" size="lg" asChild className="gap-2">
+                <a href="https://www.google.com/maps/dir/?api=1&destination=Oncovita+Casablanca&destination_place_id=ChIJs-lp1maWpg0RkmzRqHZnGG8" target="_blank" rel="noopener noreferrer">
+                  <Navigation size={16} /> Google Maps
+                </a>
+              </Button>
+              <Button variant="hero-outline" size="lg" asChild className="gap-2">
+                <a href="https://waze.com/ul?ll=33.5697,-7.6322&navigate=yes" target="_blank" rel="noopener noreferrer">
+                  <Navigation size={16} /> Waze
+                </a>
+              </Button>
+              <Button variant="hero-outline" size="lg" asChild className="gap-2">
+                <a href="https://maps.apple.com/?daddr=33.5697,-7.6322&q=Oncovita" target="_blank" rel="noopener noreferrer">
+                  <Navigation size={16} /> Apple Maps
+                </a>
+              </Button>
             </div>
           </AnimatedSection>
         </div>
