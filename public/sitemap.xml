@@ -31,9 +31,15 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://oncovita.ma/engagement</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://oncovita.ma/journal/bien-etre-patient-traitement</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
   <url>
     <loc>https://oncovita.ma/journal/activite-physique-adaptee-cancer</loc>
     <changefreq>monthly</changefreq>
