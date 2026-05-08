@@ -7,6 +7,7 @@ import CenterPage from "./pages/CenterPage.tsx";
 import ContactPage from "./pages/ContactPage.tsx";
 import JournalPage from "./pages/JournalPage.tsx";
 import ArticlePage from "./pages/ArticlePage.tsx";
+import EngagementPage from "./pages/EngagementPage.tsx";
 import NotFound from "./pages/NotFound.tsx";
 import ScrollToTop from "./components/ScrollToTop";
 
@@ -24,6 +25,7 @@ const App = () => (
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/journal" element={<JournalPage />} />
           <Route path="/journal/:slug" element={<ArticlePage />} />
+          <Route path="/engagement" element={<EngagementPage />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
