@@ -14,7 +14,7 @@ const Index = () => {
       <section className="relative min-h-[85vh] md:min-h-[90vh] flex items-center">
         <div className="absolute inset-0">
           <img src={heroImage} alt="Intérieur du centre Oncovita" className="w-full h-full object-cover" loading="eager" />
-          <div className="absolute inset-0 bg-gradient-to-r from-foreground/85 via-foreground/65 to-foreground/30 md:from-foreground/80 md:via-foreground/60 md:to-foreground/20" />
+          <div className="absolute inset-0 bg-gradient-to-r from-foreground/95 via-foreground/80 to-foreground/50 md:from-foreground/90 md:via-foreground/75 md:to-foreground/40" />
         </div>
         <div className="relative container-oncovita px-5 md:px-6 lg:px-20 py-16 md:py-20">
           <div className="max-w-2xl">
@@ -29,7 +29,7 @@ const Index = () => {
               </h1>
             </AnimatedSection>
             <AnimatedSection delay={400}>
-              <p className="font-body text-primary-foreground/70 text-base md:text-xl leading-relaxed mb-8 md:mb-10 max-w-xl">
+              <p className="font-body text-primary-foreground text-base md:text-xl leading-relaxed mb-8 md:mb-10 max-w-xl drop-shadow-[0_2px_8px_rgba(0,0,0,0.5)]">
                 Oncovita est un centre médical dédié à l'accompagnement des patients atteints de cancer, 
                 alliant médecine oncologique fondée sur les preuves scientifiques et accompagnement global du patient.
               </p>
