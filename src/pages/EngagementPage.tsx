@@ -4,8 +4,51 @@ import { Calendar, MapPin, ArrowRight } from "lucide-react";
 import Layout from "@/components/Layout";
 import AnimatedSection from "@/components/AnimatedSection";
 import { Button } from "@/components/ui/button";
-import { events, eventCategories, featuredEvent, type EventCategory } from "@/data/events";
+import { events, eventCategories, featuredEvent, type EventCategory, type OncovitaEvent } from "@/data/events";
 import { applySeo } from "@/lib/seo";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+
+const EventMedia = ({ ev, eager = false }: { ev: OncovitaEvent; eager?: boolean }) => {
+  const imgs = ev.images && ev.images.length > 1 ? ev.images : null;
+  if (!imgs) {
+    return (
+      <img
+        src={ev.image}
+        alt={ev.imageAlt}
+        loading={eager ? "eager" : "lazy"}
+        width={1280}
+        height={960}
+        className="w-full h-full object-cover"
+      />
+    );
+  }
+  return (
+    <Carousel opts={{ loop: true }} className="w-full h-full">
+      <CarouselContent className="h-full">
+        {imgs.map((im, i) => (
+          <CarouselItem key={i} className="h-full">
+            <img
+              src={im.src}
+              alt={im.alt}
+              loading={eager && i === 0 ? "eager" : "lazy"}
+              width={1280}
+              height={960}
+              className="w-full h-full object-cover aspect-[4/3]"
+            />
+          </CarouselItem>
+        ))}
+      </CarouselContent>
+      <CarouselPrevious className="left-3" />
+      <CarouselNext className="right-3" />
+    </Carousel>
+  );
+};
 
 const formatDate = (iso: string) =>
   new Date(iso).toLocaleDateString("fr-FR", {
