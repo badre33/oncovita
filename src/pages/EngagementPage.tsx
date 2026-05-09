@@ -155,15 +155,8 @@ const EngagementPage = () => {
         <div className="container-oncovita px-5 md:px-12 lg:px-20">
           <AnimatedSection>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center bg-card rounded-3xl overflow-hidden shadow-soft">
-              <div className="aspect-[4/3] lg:aspect-auto lg:h-full overflow-hidden">
-                <img
-                  src={featured.image}
-                  alt={featured.imageAlt}
-                  loading="eager"
-                  width={1280}
-                  height={832}
-                  className="w-full h-full object-cover"
-                />
+              <div className="aspect-[4/3] lg:aspect-auto lg:h-full overflow-hidden relative">
+                <EventMedia ev={featured} eager />
               </div>
               <div className="p-8 md:p-12 lg:pr-16">
                 <p className="font-body text-xs tracking-[0.3em] uppercase text-primary mb-4">
