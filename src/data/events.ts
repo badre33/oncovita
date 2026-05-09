@@ -57,57 +57,58 @@ export const events: OncovitaEvent[] = [
   },
   {
     slug: "sabahiyates-emission-tv",
-    title: "Émission Sabahiyates — sensibilisation grand public",
+    title: "Émission Sabahiyates au Centre Oncovita",
     category: "Média",
     date: "2025-10-08",
-    location: "Plateau TV, 2M",
+    location: "Centre Oncovita, Casablanca",
     image: photoA,
     imageAlt:
-      "Le Dr Malak Rita Hajji invitée sur le plateau de l'émission Sabahiyates (2M) pour sensibiliser au cancer du sein",
+      "L'équipe de l'émission Sabahiyates (2M) en tournage au Centre Oncovita, à la découverte du parcours de soins intégratifs",
     images: [
       {
         src: photoA,
-        alt: "Le Dr Malak Rita Hajji sur le plateau de Sabahiyates — sensibilisation au cancer du sein",
+        alt: "Tournage de l'émission Sabahiyates au Centre Oncovita avec le Dr Malak Rita Hajji",
       },
       {
         src: photoB,
-        alt: "Intervention du Dr Malak Rita Hajji dans l'émission Sabahiyates sur 2M",
+        alt: "L'équipe de Sabahiyates expérimente le parcours de soins du Centre Oncovita",
       },
     ],
     excerpt:
-      "Le Dr Malak Rita Hajji invitée sur le plateau de Sabahiyates pour parler oncologie intégrative et dépistage du cancer du sein.",
+      "L'équipe de Sabahiyates est venue au Centre Oncovita pour découvrir et expérimenter notre parcours de soins intégratifs.",
     description:
-      "Le Dr Malak Rita Hajji a été invitée sur le plateau de l'émission Sabahiyates pour porter la voix de l'oncologie intégrative auprès du grand public marocain. Une intervention pédagogique pour expliquer l'importance du dépistage précoce, présenter l'approche d'Oncovita et rappeler que prendre soin des patientes va bien au-delà du seul traitement médical.",
+      "L'équipe de l'émission Sabahiyates s'est rendue au Centre Oncovita pour vivre de l'intérieur le parcours de soins intégratifs proposé aux patientes. Une immersion pédagogique pour faire découvrir au grand public marocain l'approche d'Oncovita : prendre soin du corps et de l'esprit, au-delà du seul traitement médical.",
     highlights: [
+      "Immersion dans le parcours de soins intégratifs",
+      "Découverte du Centre et de son équipe",
       "Sensibilisation grand public sur une chaîne nationale",
-      "Présentation de l'approche intégrative d'Oncovita",
-      "Pédagogie autour du dépistage précoce",
     ],
   },
   {
     slug: "atelier-nexia-morocco",
     title: "Atelier de sensibilisation — Nexia Morocco",
-    category: "Intervention extérieure",
+    category: "Sensibilisation",
     date: "2025-10-20",
-    location: "Cabinet Nexia Morocco, Casablanca",
+    location: "Centre Oncovita, Casablanca",
     image: photoC,
     imageAlt:
-      "Atelier de sensibilisation au cancer du sein animé par le Dr Malak Rita Hajji pour les collaboratrices de Nexia Morocco",
+      "Les collaboratrices de Nexia Morocco accueillies au Centre Oncovita pour un atelier de sensibilisation au cancer du sein",
     images: [
       {
         src: photoC,
-        alt: "Échange avec les collaboratrices de Nexia Morocco lors de l'atelier de sensibilisation au cancer du sein",
+        alt: "Échange avec les collaboratrices de Nexia Morocco au Centre Oncovita pour la sensibilisation au cancer du sein",
       },
       {
         src: photoD,
-        alt: "Atelier Oncovita chez Nexia Morocco — sensibilisation au dépistage du cancer du sein en entreprise",
+        alt: "Atelier Oncovita au Centre avec l'équipe féminine de Nexia Morocco — sensibilisation et dépistage",
       },
     ],
     excerpt:
-      "Le Dr Malak Rita Hajji intervient auprès des collaboratrices du cabinet Nexia Morocco pour un atelier dédié au dépistage et à la prévention.",
+      "Les collaboratrices de Nexia Morocco ont été accueillies au Centre Oncovita pour un atelier dédié au dépistage et à la prévention.",
     description:
-      "Dans le cadre d'Octobre Rose, Oncovita s'est rendu au sein du cabinet Nexia Morocco pour animer un atelier de sensibilisation auprès des collaboratrices. Au programme : informations sur le dépistage précoce, gestes d'autopalpation, échanges autour des facteurs de risque et un temps de questions-réponses dans un cadre convivial et bienveillant.",
+      "Dans le cadre d'Octobre Rose, les collaboratrices du cabinet Nexia Morocco ont été reçues au Centre Oncovita pour un atelier de sensibilisation animé par le Dr Malak Rita Hajji. Au programme : informations sur le dépistage précoce, gestes d'autopalpation, échanges sur les facteurs de risque et temps de questions-réponses dans un cadre convivial et bienveillant.",
     highlights: [
+      "Accueil au Centre Oncovita",
       "Sensibilisation au dépistage précoce",
       "Démonstration des gestes d'autopalpation",
       "Échange ouvert avec les collaboratrices de Nexia Morocco",
