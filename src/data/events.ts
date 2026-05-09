@@ -1,8 +1,8 @@
 import eventOctobreRose from "@/assets/event-octobre-rose.jpg";
-import eventNexia1 from "@/assets/event-yoga-relaxation.jpeg";
-import eventNexia2 from "@/assets/event-yoga-mouvement.jpeg";
-import eventSabahiyates1 from "@/assets/event-table-parole.jpeg";
-import eventSabahiyates2 from "@/assets/event-equipe-oncovita.jpeg";
+import photoA from "@/assets/event-yoga-relaxation.jpeg";
+import photoB from "@/assets/event-yoga-mouvement.jpeg";
+import photoC from "@/assets/event-table-parole.jpeg";
+import photoD from "@/assets/event-equipe-oncovita.jpeg";
 
 export type EventCategory =
   | "Sensibilisation"
@@ -13,14 +13,20 @@ export type EventCategory =
   | "Média"
   | "Vie du Centre";
 
+export interface EventImage {
+  src: string;
+  alt: string;
+}
+
 export interface OncovitaEvent {
   slug: string;
   title: string;
   category: EventCategory;
   date: string; // ISO
   location: string;
-  image: string;
+  image: string; // cover
   imageAlt: string;
+  images?: EventImage[]; // gallery
   excerpt: string;
   description: string;
   highlights?: string[];
@@ -50,52 +56,24 @@ export const events: OncovitaEvent[] = [
     featured: true,
   },
   {
-    slug: "atelier-nexia-morocco",
-    title: "Atelier de sensibilisation au cancer du sein — Nexia Morocco",
-    category: "Intervention extérieure",
-    date: "2025-10-20",
-    location: "Cabinet Nexia Morocco, Casablanca",
-    image: eventNexia1,
-    imageAlt:
-      "Atelier de sensibilisation au cancer du sein animé par le Dr Malak Rita Hajji pour l'équipe féminine du cabinet Nexia Morocco à Casablanca",
-    excerpt:
-      "Le Dr Malak Rita Hajji intervient auprès de l'équipe féminine collaboratrice du cabinet Nexia Morocco pour un atelier dédié au dépistage et à la prévention.",
-    description:
-      "Dans le cadre d'Octobre Rose, Oncovita s'est rendu au sein du cabinet Nexia Morocco pour animer un atelier de sensibilisation auprès des collaboratrices. Au programme : informations sur le dépistage précoce, gestes d'autopalpation, échanges autour des facteurs de risque et temps de questions-réponses dans un cadre convivial et bienveillant.",
-    highlights: [
-      "Sensibilisation au dépistage précoce",
-      "Démonstration des gestes d'autopalpation",
-      "Échange ouvert avec les collaboratrices de Nexia Morocco",
-    ],
-  },
-  {
-    slug: "atelier-nexia-morocco-echanges",
-    title: "Échanges avec les collaboratrices — Nexia Morocco",
-    category: "Intervention extérieure",
-    date: "2025-10-20",
-    location: "Cabinet Nexia Morocco, Casablanca",
-    image: eventNexia2,
-    imageAlt:
-      "Temps d'échange et de questions-réponses lors de l'atelier de sensibilisation au cancer du sein chez Nexia Morocco animé par Oncovita",
-    excerpt:
-      "Un temps d'écoute et de dialogue avec les collaboratrices du cabinet, autour de la prévention et de l'accompagnement.",
-    description:
-      "Au-delà de la sensibilisation médicale, cet atelier a permis de libérer la parole. Les collaboratrices ont pu poser librement leurs questions sur le cancer du sein, le suivi médical, la prévention au quotidien et les ressources disponibles au Maroc pour les patientes et leurs proches.",
-    highlights: [
-      "Questions-réponses libres",
-      "Information sur les ressources en oncologie au Maroc",
-      "Atelier en entreprise dans une atmosphère bienveillante",
-    ],
-  },
-  {
-    slug: "sabahiyates-emission-tv-1",
+    slug: "sabahiyates-emission-tv",
     title: "Émission Sabahiyates — sensibilisation grand public",
     category: "Média",
     date: "2025-10-08",
     location: "Plateau TV, 2M",
-    image: eventSabahiyates1,
+    image: photoA,
     imageAlt:
-      "Le Dr Malak Rita Hajji invitée sur le plateau de l'émission Sabahiyates pour sensibiliser le grand public au cancer du sein",
+      "Le Dr Malak Rita Hajji invitée sur le plateau de l'émission Sabahiyates (2M) pour sensibiliser au cancer du sein",
+    images: [
+      {
+        src: photoA,
+        alt: "Le Dr Malak Rita Hajji sur le plateau de Sabahiyates — sensibilisation au cancer du sein",
+      },
+      {
+        src: photoB,
+        alt: "Intervention du Dr Malak Rita Hajji dans l'émission Sabahiyates sur 2M",
+      },
+    ],
     excerpt:
       "Le Dr Malak Rita Hajji invitée sur le plateau de Sabahiyates pour parler oncologie intégrative et dépistage du cancer du sein.",
     description:
@@ -107,22 +85,32 @@ export const events: OncovitaEvent[] = [
     ],
   },
   {
-    slug: "sabahiyates-emission-tv-2",
-    title: "Sabahiyates : parler de la maladie sans tabou",
-    category: "Média",
-    date: "2025-10-08",
-    location: "Plateau TV, 2M",
-    image: eventSabahiyates2,
+    slug: "atelier-nexia-morocco",
+    title: "Atelier de sensibilisation — Nexia Morocco",
+    category: "Intervention extérieure",
+    date: "2025-10-20",
+    location: "Cabinet Nexia Morocco, Casablanca",
+    image: photoC,
     imageAlt:
-      "Intervention du Dr Malak Rita Hajji sur le plateau de Sabahiyates : briser les tabous autour du cancer au Maroc",
+      "Atelier de sensibilisation au cancer du sein animé par le Dr Malak Rita Hajji pour les collaboratrices de Nexia Morocco",
+    images: [
+      {
+        src: photoC,
+        alt: "Échange avec les collaboratrices de Nexia Morocco lors de l'atelier de sensibilisation au cancer du sein",
+      },
+      {
+        src: photoD,
+        alt: "Atelier Oncovita chez Nexia Morocco — sensibilisation au dépistage du cancer du sein en entreprise",
+      },
+    ],
     excerpt:
-      "Une seconde séquence sur le plateau de Sabahiyates pour briser les tabous autour du cancer et de l'accompagnement des patientes.",
+      "Le Dr Malak Rita Hajji intervient auprès des collaboratrices du cabinet Nexia Morocco pour un atelier dédié au dépistage et à la prévention.",
     description:
-      "Dans cette seconde séquence à l'antenne, le Dr Hajji aborde la dimension humaine du parcours de soin : l'importance de l'écoute, du soutien émotionnel, de l'activité physique adaptée et du bien-être au quotidien. Un message essentiel pour les femmes marocaines confrontées à la maladie, à elles-mêmes ou auprès d'un proche.",
+      "Dans le cadre d'Octobre Rose, Oncovita s'est rendu au sein du cabinet Nexia Morocco pour animer un atelier de sensibilisation auprès des collaboratrices. Au programme : informations sur le dépistage précoce, gestes d'autopalpation, échanges autour des facteurs de risque et un temps de questions-réponses dans un cadre convivial et bienveillant.",
     highlights: [
-      "Approche humaine et globale du parcours de soin",
-      "Message d'espoir et de prévention",
-      "Visibilité médiatique de l'oncologie intégrative au Maroc",
+      "Sensibilisation au dépistage précoce",
+      "Démonstration des gestes d'autopalpation",
+      "Échange ouvert avec les collaboratrices de Nexia Morocco",
     ],
   },
 ];
