@@ -1,54 +1,11 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo } from "react";
 import { Link } from "react-router-dom";
-import { Calendar, MapPin, ArrowRight } from "lucide-react";
+import { ArrowRight, Calendar, MapPin } from "lucide-react";
 import Layout from "@/components/Layout";
 import AnimatedSection from "@/components/AnimatedSection";
 import { Button } from "@/components/ui/button";
-import { events, eventCategories, featuredEvent, type EventCategory, type OncovitaEvent } from "@/data/events";
+import { events, featuredEvent } from "@/data/events";
 import { applySeo } from "@/lib/seo";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
-
-const EventMedia = ({ ev, eager = false }: { ev: OncovitaEvent; eager?: boolean }) => {
-  const imgs = ev.images && ev.images.length > 1 ? ev.images : null;
-  if (!imgs) {
-    return (
-      <img
-        src={ev.image}
-        alt={ev.imageAlt}
-        loading={eager ? "eager" : "lazy"}
-        width={1280}
-        height={960}
-        className="w-full h-full object-cover"
-      />
-    );
-  }
-  return (
-    <Carousel opts={{ loop: true }} className="w-full h-full">
-      <CarouselContent className="h-full">
-        {imgs.map((im, i) => (
-          <CarouselItem key={i} className="h-full">
-            <img
-              src={im.src}
-              alt={im.alt}
-              loading={eager && i === 0 ? "eager" : "lazy"}
-              width={1280}
-              height={960}
-              className="w-full h-full object-cover aspect-[4/3]"
-            />
-          </CarouselItem>
-        ))}
-      </CarouselContent>
-      <CarouselPrevious className="left-3" />
-      <CarouselNext className="right-3" />
-    </Carousel>
-  );
-};
 
 const formatDate = (iso: string) =>
   new Date(iso).toLocaleDateString("fr-FR", {
@@ -57,30 +14,54 @@ const formatDate = (iso: string) =>
     year: "numeric",
   });
 
+interface WallItem {
+  src: string;
+  alt: string;
+  eventTitle: string;
+  category: string;
+  date: string;
+  location: string;
+  caption: string;
+}
+
 const EngagementPage = () => {
-  const [activeCategory, setActiveCategory] = useState<EventCategory | "Tous">("Tous");
   const featured = featuredEvent();
 
-  const visibleEvents = useMemo(() => {
-    const list = activeCategory === "Tous"
-      ? events
-      : events.filter((e) => e.category === activeCategory);
-    return list.filter((e) => e.slug !== featured.slug);
-  }, [activeCategory, featured.slug]);
+  // Flatten all event photos into a single wall feed
+  const wallItems: WallItem[] = useMemo(() => {
+    const items: WallItem[] = [];
+    events.forEach((ev) => {
+      const imgs = ev.images && ev.images.length > 0
+        ? ev.images
+        : [{ src: ev.image, alt: ev.imageAlt }];
+      imgs.forEach((im) => {
+        items.push({
+          src: im.src,
+          alt: im.alt,
+          eventTitle: ev.title,
+          category: ev.category,
+          date: ev.date,
+          location: ev.location,
+          caption: ev.excerpt,
+        });
+      });
+    });
+    return items;
+  }, []);
 
   useEffect(() => {
     applySeo({
       title:
         "Engagement & Événements Oncovita — Octobre Rose, ateliers, interventions à Casablanca",
       description:
-        "Découvrez les actions du Dr Malak Rita Hajji et du centre Oncovita : Octobre Rose, séances de yoga adapté, tables de parole, conférences et interventions de sensibilisation au Maroc.",
+        "Découvrez en images les actions du Dr Malak Rita Hajji et du centre Oncovita : Octobre Rose, ateliers de sensibilisation, interventions médias et rencontres au Maroc.",
       keywords: [
         "Octobre Rose Casablanca",
         "sensibilisation cancer du sein Maroc",
-        "yoga oncologie Casablanca",
-        "table de parole patientes cancer",
         "Dr Malak Rita Hajji",
         "événements Oncovita",
+        "Sabahiyates Oncovita",
+        "Nexia Morocco sensibilisation",
       ],
       url: "/engagement",
       image: featured.image,
@@ -88,7 +69,6 @@ const EngagementPage = () => {
       type: "website",
     });
 
-    // JSON-LD ItemList of Events
     const ld = document.createElement("script");
     ld.type = "application/ld+json";
     ld.text = JSON.stringify({
@@ -132,134 +112,63 @@ const EngagementPage = () => {
   return (
     <Layout>
       {/* Hero */}
-      <section className="relative pt-32 pb-16 md:pt-40 md:pb-20 gradient-warm">
+      <section className="relative pt-32 pb-12 md:pt-40 md:pb-16 gradient-warm">
         <div className="container-oncovita px-5 md:px-12 lg:px-20 text-center max-w-3xl mx-auto">
           <AnimatedSection>
             <p className="font-body text-xs tracking-[0.3em] uppercase text-primary mb-4">
-              Engagement Oncovita
+              Album de souvenirs Oncovita
             </p>
             <h1 className="font-display text-4xl md:text-5xl lg:text-6xl text-foreground mb-6">
-              Actions, événements & sensibilisation
+              Nos engagements en images
             </h1>
             <p className="font-body text-muted-foreground text-lg leading-relaxed">
               Au Centre et à l'extérieur, le Dr Malak Rita Hajji et l'équipe Oncovita s'engagent
-              au quotidien : Octobre Rose, ateliers de yoga adapté, tables de parole, conférences
-              et interventions de sensibilisation à travers le Maroc.
+              au quotidien : Octobre Rose, ateliers de sensibilisation, interventions médias et
+              rencontres avec les patientes à travers le Maroc.
             </p>
           </AnimatedSection>
         </div>
       </section>
 
-      {/* Featured event */}
-      <section className="section-padding">
+      {/* Mur de souvenirs — Pinterest masonry */}
+      <section className="section-padding pt-12">
         <div className="container-oncovita px-5 md:px-12 lg:px-20">
-          <AnimatedSection>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center bg-card rounded-3xl overflow-hidden shadow-soft">
-              <div className="aspect-[4/3] lg:aspect-auto lg:h-full overflow-hidden relative">
-                <EventMedia ev={featured} eager />
-              </div>
-              <div className="p-8 md:p-12 lg:pr-16">
-                <p className="font-body text-xs tracking-[0.3em] uppercase text-primary mb-4">
-                  À l'affiche · {featured.category}
-                </p>
-                <h2 className="font-display text-3xl md:text-4xl text-foreground mb-5 leading-tight">
-                  {featured.title}
-                </h2>
-                <div className="flex flex-wrap items-center gap-5 text-muted-foreground font-body text-sm mb-6">
-                  <span className="flex items-center gap-2">
-                    <Calendar size={14} /> {formatDate(featured.date)}
+          <div
+            className="[column-fill:_balance] columns-1 sm:columns-2 lg:columns-3 gap-5 md:gap-7"
+          >
+            {wallItems.map((item, i) => (
+              <figure
+                key={`${item.src}-${i}`}
+                className="mb-5 md:mb-7 break-inside-avoid bg-card rounded-2xl overflow-hidden shadow-soft hover-lift"
+              >
+                <img
+                  src={item.src}
+                  alt={item.alt}
+                  loading={i < 2 ? "eager" : "lazy"}
+                  className="w-full h-auto block"
+                />
+                <figcaption className="p-5">
+                  <span className="text-[10px] tracking-[0.2em] uppercase font-body text-primary">
+                    {item.category}
                   </span>
-                  <span className="flex items-center gap-2">
-                    <MapPin size={14} /> {featured.location}
-                  </span>
-                </div>
-                <p className="font-body text-foreground/80 leading-relaxed mb-6">
-                  {featured.description}
-                </p>
-                {featured.highlights && (
-                  <ul className="space-y-2 mb-8">
-                    {featured.highlights.map((h) => (
-                      <li key={h} className="flex items-start gap-3 font-body text-sm text-foreground/75">
-                        <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2 shrink-0" />
-                        <span>{h}</span>
-                      </li>
-                    ))}
-                  </ul>
-                )}
-                <Button variant="hero" asChild>
-                  <Link to="/contact">Participer ou en savoir plus</Link>
-                </Button>
-              </div>
-            </div>
-          </AnimatedSection>
-        </div>
-      </section>
-
-      {/* Filters */}
-      <section className="pb-6">
-        <div className="container-oncovita px-5 md:px-12 lg:px-20">
-          <div className="flex flex-wrap justify-center gap-2 md:gap-3">
-            {(["Tous", ...eventCategories] as const).map((cat) => {
-              const isActive = activeCategory === cat;
-              return (
-                <button
-                  key={cat}
-                  onClick={() => setActiveCategory(cat as EventCategory | "Tous")}
-                  className={`font-body text-xs md:text-sm tracking-wider uppercase px-4 py-2 rounded-full border transition-all ${
-                    isActive
-                      ? "bg-primary text-primary-foreground border-primary"
-                      : "bg-transparent text-foreground/70 border-border hover:border-primary hover:text-primary"
-                  }`}
-                >
-                  {cat}
-                </button>
-              );
-            })}
+                  <h3 className="font-display text-lg md:text-xl text-foreground mt-2 leading-snug">
+                    {item.eventTitle}
+                  </h3>
+                  <div className="flex flex-wrap items-center gap-3 text-muted-foreground font-body text-xs mt-2">
+                    <span className="flex items-center gap-1.5">
+                      <Calendar size={12} /> {formatDate(item.date)}
+                    </span>
+                    <span className="flex items-center gap-1.5">
+                      <MapPin size={12} /> {item.location}
+                    </span>
+                  </div>
+                  <p className="font-body text-sm text-muted-foreground leading-relaxed mt-3">
+                    {item.caption}
+                  </p>
+                </figcaption>
+              </figure>
+            ))}
           </div>
-        </div>
-      </section>
-
-      {/* Events grid */}
-      <section className="section-padding pt-10">
-        <div className="container-oncovita px-5 md:px-12 lg:px-20">
-          {visibleEvents.length === 0 ? (
-            <p className="text-center font-body text-muted-foreground">
-              Aucun événement dans cette catégorie pour le moment.
-            </p>
-          ) : (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
-              {visibleEvents.map((ev, i) => (
-                <AnimatedSection key={ev.slug} delay={i * 100}>
-                  <article className="group bg-card rounded-2xl overflow-hidden shadow-soft hover-lift h-full flex flex-col">
-                    <div className="aspect-[4/3] overflow-hidden relative">
-                      <EventMedia ev={ev} />
-                    </div>
-                    <div className="p-6 md:p-7 flex flex-col flex-1">
-                      <div className="flex items-center gap-3 mb-3">
-                        <span className="text-[10px] tracking-[0.2em] uppercase px-3 py-1 rounded-full font-body bg-primary/10 text-primary">
-                          {ev.category}
-                        </span>
-                      </div>
-                      <h3 className="font-display text-xl md:text-2xl text-foreground mb-3 leading-snug group-hover:text-primary transition-colors">
-                        {ev.title}
-                      </h3>
-                      <div className="flex flex-wrap items-center gap-4 text-muted-foreground font-body text-xs mb-4">
-                        <span className="flex items-center gap-1.5">
-                          <Calendar size={12} /> {formatDate(ev.date)}
-                        </span>
-                        <span className="flex items-center gap-1.5">
-                          <MapPin size={12} /> {ev.location}
-                        </span>
-                      </div>
-                      <p className="font-body text-sm text-muted-foreground leading-relaxed">
-                        {ev.excerpt}
-                      </p>
-                    </div>
-                  </article>
-                </AnimatedSection>
-              ))}
-            </div>
-          )}
         </div>
       </section>
 
