@@ -1,53 +1,14 @@
-import { useEffect, useMemo } from "react";
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
-import { ArrowRight, Calendar, MapPin } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import Layout from "@/components/Layout";
 import AnimatedSection from "@/components/AnimatedSection";
 import { Button } from "@/components/ui/button";
 import { events, featuredEvent } from "@/data/events";
 import { applySeo } from "@/lib/seo";
 
-const formatDate = (iso: string) =>
-  new Date(iso).toLocaleDateString("fr-FR", {
-    day: "numeric",
-    month: "long",
-    year: "numeric",
-  });
-
-interface WallItem {
-  src: string;
-  alt: string;
-  eventTitle: string;
-  category: string;
-  date: string;
-  location: string;
-  caption: string;
-}
-
 const EngagementPage = () => {
   const featured = featuredEvent();
-
-  // Flatten all event photos into a single wall feed
-  const wallItems: WallItem[] = useMemo(() => {
-    const items: WallItem[] = [];
-    events.forEach((ev) => {
-      const imgs = ev.images && ev.images.length > 0
-        ? ev.images
-        : [{ src: ev.image, alt: ev.imageAlt }];
-      imgs.forEach((im) => {
-        items.push({
-          src: im.src,
-          alt: im.alt,
-          eventTitle: ev.title,
-          category: ev.category,
-          date: ev.date,
-          location: ev.location,
-          caption: ev.excerpt,
-        });
-      });
-    });
-    return items;
-  }, []);
 
   useEffect(() => {
     applySeo({
