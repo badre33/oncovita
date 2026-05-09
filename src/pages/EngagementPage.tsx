@@ -231,15 +231,8 @@ const EngagementPage = () => {
               {visibleEvents.map((ev, i) => (
                 <AnimatedSection key={ev.slug} delay={i * 100}>
                   <article className="group bg-card rounded-2xl overflow-hidden shadow-soft hover-lift h-full flex flex-col">
-                    <div className="aspect-[4/3] overflow-hidden">
-                      <img
-                        src={ev.image}
-                        alt={ev.imageAlt}
-                        loading="lazy"
-                        width={1280}
-                        height={960}
-                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                      />
+                    <div className="aspect-[4/3] overflow-hidden relative">
+                      <EventMedia ev={ev} />
                     </div>
                     <div className="p-6 md:p-7 flex flex-col flex-1">
                       <div className="flex items-center gap-3 mb-3">
