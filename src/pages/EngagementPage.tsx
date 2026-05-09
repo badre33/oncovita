@@ -97,38 +97,40 @@ const EngagementPage = () => {
           <div
             className="[column-fill:_balance] columns-1 sm:columns-2 lg:columns-3 gap-5 md:gap-7"
           >
-            {wallItems.map((item, i) => (
-              <figure
-                key={`${item.src}-${i}`}
-                className="mb-5 md:mb-7 break-inside-avoid bg-card rounded-2xl overflow-hidden shadow-soft hover-lift"
-              >
-                <img
-                  src={item.src}
-                  alt={item.alt}
-                  loading={i < 2 ? "eager" : "lazy"}
-                  className="w-full h-auto block"
-                />
-                <figcaption className="p-5">
-                  <span className="text-[10px] tracking-[0.2em] uppercase font-body text-primary">
-                    {item.category}
-                  </span>
-                  <h3 className="font-display text-lg md:text-xl text-foreground mt-2 leading-snug">
-                    {item.eventTitle}
-                  </h3>
-                  <div className="flex flex-wrap items-center gap-3 text-muted-foreground font-body text-xs mt-2">
-                    <span className="flex items-center gap-1.5">
-                      <Calendar size={12} /> {formatDate(item.date)}
-                    </span>
-                    <span className="flex items-center gap-1.5">
-                      <MapPin size={12} /> {item.location}
-                    </span>
+            {events.map((ev, i) => {
+              const imgs = ev.images && ev.images.length > 0
+                ? ev.images
+                : [{ src: ev.image, alt: ev.imageAlt }];
+              return (
+                <figure
+                  key={ev.slug}
+                  className="mb-5 md:mb-7 break-inside-avoid bg-card rounded-2xl overflow-hidden shadow-soft hover-lift"
+                >
+                  <div className="flex flex-col">
+                    {imgs.map((im, j) => (
+                      <img
+                        key={j}
+                        src={im.src}
+                        alt={im.alt}
+                        loading={i < 1 && j === 0 ? "eager" : "lazy"}
+                        className="w-full h-auto block"
+                      />
+                    ))}
                   </div>
-                  <p className="font-body text-sm text-muted-foreground leading-relaxed mt-3">
-                    {item.caption}
-                  </p>
-                </figcaption>
-              </figure>
-            ))}
+                  <figcaption className="p-5">
+                    <span className="text-[10px] tracking-[0.2em] uppercase font-body text-primary">
+                      {ev.category}
+                    </span>
+                    <h3 className="font-display text-lg md:text-xl text-foreground mt-2 leading-snug">
+                      {ev.title}
+                    </h3>
+                    <p className="font-body text-sm text-muted-foreground leading-relaxed mt-2">
+                      {ev.excerpt}
+                    </p>
+                  </figcaption>
+                </figure>
+              );
+            })}
           </div>
         </div>
       </section>
