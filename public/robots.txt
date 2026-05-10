@@ -1,4 +1,15 @@
 User-agent: *
 Allow: /
 
+# Crawlers IA & moteurs verticaux
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
 Sitemap: https://oncovita.ma/sitemap.xml
+Host: https://oncovita.ma
