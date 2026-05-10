@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Heart, Leaf, Sparkles, Users, ArrowRight, Shield, Activity, Brain, Smile } from "lucide-react";
 import Layout from "@/components/Layout";
+import InstagramFeed from "@/components/InstagramFeed";
 import AnimatedSection from "@/components/AnimatedSection";
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-center.jpg";
@@ -235,6 +236,9 @@ const Index = () => {
           </div>
         </div>
       </section>
+
+      {/* Instagram */}
+      <InstagramFeed />
 
       {/* CTA */}
       <section className="section-padding gradient-warm">
