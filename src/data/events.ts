@@ -3,6 +3,11 @@ import photoA from "@/assets/event-yoga-relaxation.jpeg";
 import photoB from "@/assets/event-yoga-mouvement.jpeg";
 import photoC from "@/assets/event-table-parole.jpeg";
 import photoD from "@/assets/event-equipe-oncovita.jpeg";
+import roseDarzhor1 from "@/assets/event-octobre-rose-darzhor-1.jpg";
+import roseLittoral from "@/assets/event-octobre-rose-littoral.jpg";
+import roseEntreprise3 from "@/assets/event-octobre-rose-entreprise-3.jpg";
+import roseEntreprise4 from "@/assets/event-octobre-rose-entreprise-4.jpg";
+import roseDarzhor5 from "@/assets/event-octobre-rose-darzhor-5.jpg";
 
 export type EventCategory =
   | "Sensibilisation"
@@ -36,22 +41,44 @@ export interface OncovitaEvent {
 export const events: OncovitaEvent[] = [
   {
     slug: "octobre-rose-2025",
-    title: "Octobre Rose : sensibilisation au cancer du sein",
+    title: "Octobre Rose : sensibilisation au cancer du sein en entreprise",
     category: "Sensibilisation",
     date: "2025-10-15",
     location: "Casablanca",
-    image: eventOctobreRose,
+    image: roseDarzhor1,
     imageAlt:
-      "Octobre Rose à Casablanca : ruban rose et fleurs symbolisant la sensibilisation au cancer du sein menée par Oncovita",
+      "Octobre Rose : Dr Malak Rita Hajji et l'équipe Oncovita lors d'un atelier de sensibilisation au cancer du sein en entreprise à Casablanca",
+    images: [
+      {
+        src: roseDarzhor1,
+        alt: "Atelier Octobre Rose animé par le Dr Malak Rita Hajji avec l'association Dar Zhor",
+      },
+      {
+        src: roseLittoral,
+        alt: "Octobre Rose à la Clinique Le Littoral (groupe Oncorad), Casablanca — équipe soignante mobilisée pour la sensibilisation au cancer du sein",
+      },
+      {
+        src: roseEntreprise3,
+        alt: "Atelier Octobre Rose en entreprise à Casablanca — collaboratrices réunies autour du dépistage du cancer du sein",
+      },
+      {
+        src: roseEntreprise4,
+        alt: "Table ronde Octobre Rose en entreprise avec l'équipe Oncovita et le groupe Oncorad",
+      },
+      {
+        src: roseDarzhor5,
+        alt: "Photo de groupe d'un atelier Octobre Rose en entreprise animé par Oncovita avec l'association Dar Zhor",
+      },
+    ],
     excerpt:
-      "Une mobilisation collective autour du dépistage précoce du cancer du sein, animée par le Dr Malak Rita Hajji et l'équipe Oncovita.",
+      "Tout au long d'octobre, le Dr Malak Rita Hajji et l'équipe Oncovita interviennent dans les entreprises de Casablanca pour sensibiliser au dépistage précoce du cancer du sein.",
     description:
-      "Tout au long du mois d'octobre, Oncovita s'engage aux côtés des femmes du Maroc pour rappeler l'importance du dépistage précoce du cancer du sein. Conférences grand public, ateliers de sensibilisation, échanges avec les patientes et leurs proches : un programme pensé pour informer, rassurer et briser les tabous autour de la maladie.",
+      "Pendant tout le mois d'Octobre Rose, Oncovita se mobilise au cœur des entreprises marocaines : ateliers de sensibilisation, démonstrations d'autopalpation, échanges sur le dépistage précoce et temps de questions-réponses. Ces rencontres, menées notamment à la Clinique Le Littoral (groupe Oncorad) et avec l'association Dar Zhor, rassemblent les équipes féminines autour d'un message essentiel : détecter tôt, c'est mieux soigner.",
     highlights: [
-      "Conférences sur le dépistage précoce et l'autopalpation",
-      "Témoignages de patientes accompagnées par le Centre",
-      "Ateliers bien-être ouverts aux femmes en parcours de soin",
-      "Échanges avec le Dr Malak Rita Hajji",
+      "Interventions en entreprise à Casablanca",
+      "Mobilisation à la Clinique Le Littoral (groupe Oncorad)",
+      "Partenariat avec l'association Dar Zhor",
+      "Démonstrations d'autopalpation et échanges avec le Dr Malak Rita Hajji",
     ],
     featured: true,
   },
