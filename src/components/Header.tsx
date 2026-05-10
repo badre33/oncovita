@@ -8,6 +8,7 @@ const navItems = [
   { label: "Le Centre", path: "/center" },
   { label: "Engagement", path: "/engagement" },
   { label: "Journal", path: "/journal" },
+  { label: "Accès", path: "/acces" },
   { label: "Contact", path: "/contact" },
 ];
 

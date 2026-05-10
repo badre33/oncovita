@@ -31,19 +31,26 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "MedicalClinic",
+      "@type": ["MedicalClinic", "LocalBusiness"],
+      "@id": "https://oncovita.ma/#clinic",
       "name": "Oncovita",
+      "alternateName": "Centre Oncovita",
       "description": "Centre d'oncologie intégrative à Casablanca dédié à l'accompagnement global des patients atteints de cancer.",
       "url": "https://oncovita.ma/",
       "telephone": "+212522980719",
       "email": "contact@oncovita.ma",
       "image": "https://oncovita.ma/og-image.jpg",
+      "logo": "https://oncovita.ma/logo-oncovita.png",
+      "priceRange": "€€",
+      "currenciesAccepted": "MAD",
+      "paymentAccepted": "Espèces, Carte bancaire, Virement",
       "medicalSpecialty": ["Oncologic", "Oncology"],
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "5ème étage, Immeuble FIRST, 401 Route d'El Jadida",
         "addressLocality": "Casablanca",
         "postalCode": "20000",
+        "addressRegion": "Casablanca-Settat",
         "addressCountry": "MA"
       },
       "geo": {
@@ -52,9 +59,9 @@
         "longitude": -7.6436479
       },
       "hasMap": "https://www.google.com/maps/place/?q=place_id:ChIJs-nWZZktpg0RkmzRqHZnGG8",
-      "priceRange": "€€",
       "areaServed": [
         { "@type": "City", "name": "Casablanca" },
+        { "@type": "AdministrativeArea", "name": "Casablanca-Settat" },
         { "@type": "Country", "name": "Maroc" }
       ],
       "openingHoursSpecification": [
@@ -70,6 +77,20 @@
           "opens": "13:30",
           "closes": "17:30"
         }
+      ],
+      "founder": {
+        "@type": "Person",
+        "name": "Dr Malak Rita Hajji",
+        "jobTitle": "Oncologue médicale, fondatrice d'Oncovita"
+      },
+      "availableService": [
+        { "@type": "MedicalProcedure", "name": "Consultation oncologique" },
+        { "@type": "MedicalProcedure", "name": "Curiethérapie" },
+        { "@type": "MedicalTherapy", "name": "Accompagnement oncologique intégratif" },
+        { "@type": "MedicalTherapy", "name": "Activité physique adaptée" },
+        { "@type": "MedicalTherapy", "name": "Yoga thérapeutique" },
+        { "@type": "MedicalTherapy", "name": "Soutien psychologique et table de parole" },
+        { "@type": "MedicalTherapy", "name": "Sensibilisation au dépistage du cancer du sein" }
       ],
       "sameAs": [
         "https://www.instagram.com/oncovita_/",
