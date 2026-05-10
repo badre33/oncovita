@@ -18,6 +18,8 @@ import belkhayat2 from "@/assets/event-belkhayat-2.jpg";
 import shooting1 from "@/assets/event-shooting-1.jpg";
 import shooting2 from "@/assets/event-shooting-2.jpg";
 import decorOncovita from "@/assets/event-decor-oncovita.jpg";
+import yogaRire from "@/assets/event-yoga-rire.jpg";
+import meditationMalak from "@/assets/event-meditation-malak.jpg";
 
 export type EventCategory =
   | "Sensibilisation"
@@ -250,6 +252,56 @@ export const events: OncovitaEvent[] = [
       "Shooting photo et vidéo au Centre",
       "Cabinet du Dr Malak Rita Hajji",
       "Coulisses et équipe technique",
+    ],
+  },
+  {
+    slug: "yoga-du-rire",
+    title: "Séance de yoga du rire au Centre Oncovita",
+    category: "Yoga & Bien-être",
+    date: "2025-07-12",
+    location: "Centre Oncovita, Casablanca",
+    image: yogaRire,
+    imageAlt:
+      "Séance de yoga du rire au Centre Oncovita : patientes les bras levés sous le logo papillon Oncovita",
+    images: [
+      {
+        src: yogaRire,
+        alt: "Patientes participant à une séance de yoga du rire dans l'espace bien-être du Centre Oncovita à Casablanca",
+      },
+    ],
+    excerpt:
+      "Une séance de yoga du rire au Centre Oncovita, pour relâcher les tensions et retrouver de la légèreté.",
+    description:
+      "Au Centre Oncovita, le yoga du rire fait partie des ateliers proposés aux patientes pour libérer les tensions, oxygéner le corps et nourrir l'esprit. Un moment de partage, de complicité et de joie simple, fidèle à la philosophie d'Oncovita : prendre soin du corps et de l'esprit.",
+    highlights: [
+      "Atelier de yoga du rire",
+      "Espace bien-être du Centre Oncovita",
+      "Lâcher-prise et joie partagée",
+    ],
+  },
+  {
+    slug: "meditation-dr-malak",
+    title: "Séance de méditation guidée par le Dr Malak Rita Hajji",
+    category: "Yoga & Bien-être",
+    date: "2025-07-18",
+    location: "Centre Oncovita, Casablanca",
+    image: meditationMalak,
+    imageAlt:
+      "Dr Malak Rita Hajji guidant une séance de méditation avec ses patientes au Centre Oncovita",
+    images: [
+      {
+        src: meditationMalak,
+        alt: "Dr Malak Rita Hajji assise face à ses patientes lors d'une séance de méditation au Centre Oncovita, Casablanca",
+      },
+    ],
+    excerpt:
+      "Une séance de méditation au Centre Oncovita, guidée par le Dr Malak Rita Hajji aux côtés de ses patientes.",
+    description:
+      "Au cœur du Centre Oncovita, le Dr Malak Rita Hajji accompagne ses patientes lors d'une séance de méditation. Un temps suspendu, baigné de lumière naturelle, pour apaiser le mental, renouer avec le souffle et soutenir le parcours de soins par une présence attentive et bienveillante.",
+    highlights: [
+      "Méditation guidée par le Dr Malak Rita Hajji",
+      "Espace bien-être du Centre Oncovita",
+      "Apaisement du corps et de l'esprit",
     ],
   },
   {
