@@ -8,6 +8,8 @@ import roseLittoral from "@/assets/event-octobre-rose-littoral.jpg";
 import roseEntreprise3 from "@/assets/event-octobre-rose-entreprise-3.jpg";
 import roseEntreprise4 from "@/assets/event-octobre-rose-entreprise-4.jpg";
 import roseDarzhor5 from "@/assets/event-octobre-rose-darzhor-5.jpg";
+import roseRadisson from "@/assets/event-octobre-rose-radisson.jpg";
+import roseCfcim from "@/assets/event-octobre-rose-cfcim.jpg";
 import curie1 from "@/assets/event-curietherapie-1.jpg";
 import curie2 from "@/assets/event-curietherapie-2.jpg";
 import curie3 from "@/assets/event-curietherapie-3.jpg";
@@ -72,6 +74,14 @@ export const events: OncovitaEvent[] = [
       {
         src: roseDarzhor5,
         alt: "Photo de groupe d'un atelier Octobre Rose en entreprise animé par Oncovita avec l'association Dar Zhor",
+      },
+      {
+        src: roseRadisson,
+        alt: "Conférence Octobre Rose « Le cancer du sein, parlons-en » animée par le Dr Malak Rita Hajji au Radisson, en partenariat avec Oncorad",
+      },
+      {
+        src: roseCfcim,
+        alt: "Dr Malak Rita Hajji à la 3e édition Octobre Rose « Cancer et vie professionnelle » avec la CFCIM, Dar Zhor et le groupe Oncorad",
       },
     ],
     excerpt:
