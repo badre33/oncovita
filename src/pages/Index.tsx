@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Heart, Leaf, Sparkles, Users, ArrowRight, Shield, Activity, Brain, Smile } from "lucide-react";
+import { Heart, Leaf, Sparkles, Users, ArrowRight, Shield, Activity, Brain, Smile, Quote } from "lucide-react";
 import Layout from "@/components/Layout";
 import InstagramFeed from "@/components/InstagramFeed";
 import AnimatedSection from "@/components/AnimatedSection";
@@ -234,6 +234,65 @@ const Index = () => {
               </div>
             </AnimatedSection>
           </div>
+        </div>
+      </section>
+
+      {/* Témoignage */}
+      <section className="section-padding gradient-teal" aria-label="Témoignage de patiente">
+        <div className="container-oncovita max-w-4xl mx-auto">
+          <AnimatedSection>
+            <div className="text-center mb-10">
+              <p className="font-body text-xs tracking-[0.3em] uppercase text-primary mb-4">Paroles de patientes</p>
+              <h2 className="font-display text-3xl md:text-4xl text-foreground">
+                Ce qu'elles ressentent à Oncovita
+              </h2>
+            </div>
+          </AnimatedSection>
+
+          <AnimatedSection delay={150}>
+            <figure className="relative bg-card rounded-3xl shadow-card p-8 md:p-14 text-center">
+              <Quote
+                size={56}
+                className="absolute -top-6 left-1/2 -translate-x-1/2 text-primary bg-card rounded-full p-3 shadow-soft"
+                aria-hidden="true"
+              />
+              <blockquote className="font-display italic text-xl md:text-2xl lg:text-3xl text-foreground leading-relaxed mb-6">
+                « Pour la première fois depuis le début de ma maladie, j'ai senti que l'on
+                prenait soin de moi entièrement — pas seulement de mon cancer. L'écoute,
+                la douceur du lieu, le suivi : tout participe à se sentir vivante. »
+              </blockquote>
+              <figcaption>
+                <p className="font-body text-sm text-foreground font-medium">S., 47 ans</p>
+                <p className="font-body text-xs text-muted-foreground tracking-wider mt-1">
+                  Patiente accompagnée à Oncovita
+                </p>
+              </figcaption>
+            </figure>
+          </AnimatedSection>
+        </div>
+      </section>
+
+      {/* Partenaires */}
+      <section className="py-12 md:py-16 bg-background border-y border-border/50" aria-label="Nos partenaires">
+        <div className="container-oncovita px-5 md:px-12 lg:px-20">
+          <AnimatedSection>
+            <p className="text-center font-body text-xs tracking-[0.3em] uppercase text-muted-foreground mb-8">
+              En lien avec
+            </p>
+            <div className="flex flex-wrap items-center justify-center gap-x-12 gap-y-6 md:gap-x-20">
+              <div className="font-display text-xl md:text-2xl text-foreground/60 hover:text-primary transition-colors">
+                Groupe Oncorad
+              </div>
+              <div className="hidden md:block w-px h-8 bg-border" aria-hidden="true" />
+              <div className="font-display text-xl md:text-2xl text-foreground/60 hover:text-primary transition-colors">
+                Clinique Le Littoral
+              </div>
+              <div className="hidden md:block w-px h-8 bg-border" aria-hidden="true" />
+              <div className="font-display text-xl md:text-2xl text-foreground/60 hover:text-primary transition-colors">
+                Casablanca
+              </div>
+            </div>
+          </AnimatedSection>
         </div>
       </section>
 
