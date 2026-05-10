@@ -8,6 +8,9 @@ import roseLittoral from "@/assets/event-octobre-rose-littoral.jpg";
 import roseEntreprise3 from "@/assets/event-octobre-rose-entreprise-3.jpg";
 import roseEntreprise4 from "@/assets/event-octobre-rose-entreprise-4.jpg";
 import roseDarzhor5 from "@/assets/event-octobre-rose-darzhor-5.jpg";
+import curie1 from "@/assets/event-curietherapie-1.jpg";
+import curie2 from "@/assets/event-curietherapie-2.jpg";
+import curie3 from "@/assets/event-curietherapie-3.jpg";
 
 export type EventCategory =
   | "Sensibilisation"
@@ -16,7 +19,8 @@ export type EventCategory =
   | "Conférence"
   | "Intervention extérieure"
   | "Média"
-  | "Vie du Centre";
+  | "Vie du Centre"
+  | "Pratique médicale";
 
 export interface EventImage {
   src: string;
