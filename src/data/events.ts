@@ -8,6 +8,9 @@ import roseLittoral from "@/assets/event-octobre-rose-littoral.jpg";
 import roseEntreprise3 from "@/assets/event-octobre-rose-entreprise-3.jpg";
 import roseEntreprise4 from "@/assets/event-octobre-rose-entreprise-4.jpg";
 import roseDarzhor5 from "@/assets/event-octobre-rose-darzhor-5.jpg";
+import curie1 from "@/assets/event-curietherapie-1.jpg";
+import curie2 from "@/assets/event-curietherapie-2.jpg";
+import curie3 from "@/assets/event-curietherapie-3.jpg";
 
 export type EventCategory =
   | "Sensibilisation"
@@ -16,7 +19,8 @@ export type EventCategory =
   | "Conférence"
   | "Intervention extérieure"
   | "Média"
-  | "Vie du Centre";
+  | "Vie du Centre"
+  | "Pratique médicale";
 
 export interface EventImage {
   src: string;
@@ -141,6 +145,40 @@ export const events: OncovitaEvent[] = [
       "Échange ouvert avec les collaboratrices de Nexia Morocco",
     ],
   },
+  {
+    slug: "curietherapie-littoral-oncorad",
+    title: "Curiethérapie pour cancer du sein — Clinique Le Littoral",
+    category: "Pratique médicale",
+    date: "2025-09-10",
+    location: "Clinique Le Littoral (groupe Oncorad), Casablanca",
+    image: curie1,
+    imageAlt:
+      "Le Dr Malak Rita Hajji en intervention de curiethérapie pour un cancer du sein à la Clinique Le Littoral (groupe Oncorad), Casablanca",
+    images: [
+      {
+        src: curie1,
+        alt: "Dr Malak Rita Hajji au bloc opératoire pendant une curiethérapie du sein, Clinique Le Littoral (groupe Oncorad)",
+      },
+      {
+        src: curie2,
+        alt: "Bloc de curiethérapie à la Clinique Le Littoral — équipe soignante du groupe Oncorad aux côtés du Dr Malak Rita Hajji",
+      },
+      {
+        src: curie3,
+        alt: "Préparation et planification de la curiethérapie du sein avec l'équipe d'oncologie du groupe Oncorad",
+      },
+    ],
+    excerpt:
+      "Le Dr Malak Rita Hajji intervient à la Clinique Le Littoral du groupe Oncorad pour une curiethérapie dans la prise en charge d'un cancer du sein.",
+    description:
+      "À la Clinique Le Littoral, où elle exerce au sein du groupe Oncorad, le Dr Malak Rita Hajji réalise une curiethérapie pour le traitement d'un cancer du sein. Cette technique de radiothérapie de haute précision, intégrée au parcours de soins, permet de cibler la zone à traiter tout en préservant les tissus sains environnants.",
+    highlights: [
+      "Curiethérapie du sein",
+      "Intervention au sein du groupe Oncorad",
+      "Clinique Le Littoral, Casablanca",
+      "Précision et préservation des tissus sains",
+    ],
+  },
 ];
 
 export const featuredEvent = () => events.find((e) => e.featured) ?? events[0];
@@ -153,4 +191,5 @@ export const eventCategories: EventCategory[] = [
   "Intervention extérieure",
   "Média",
   "Vie du Centre",
+  "Pratique médicale",
 ];
