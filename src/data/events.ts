@@ -13,6 +13,11 @@ import roseCfcim from "@/assets/event-octobre-rose-cfcim.jpg";
 import curie1 from "@/assets/event-curietherapie-1.jpg";
 import curie2 from "@/assets/event-curietherapie-2.jpg";
 import curie3 from "@/assets/event-curietherapie-3.jpg";
+import belkhayat1 from "@/assets/event-belkhayat-1.jpg";
+import belkhayat2 from "@/assets/event-belkhayat-2.jpg";
+import shooting1 from "@/assets/event-shooting-1.jpg";
+import shooting2 from "@/assets/event-shooting-2.jpg";
+import decorOncovita from "@/assets/event-decor-oncovita.jpg";
 
 export type EventCategory =
   | "Sensibilisation"
@@ -188,6 +193,84 @@ export const events: OncovitaEvent[] = [
       "Clinique Le Littoral, Casablanca",
       "Précision et préservation des tissus sains",
     ],
+  },
+  {
+    slug: "rencontre-dr-belkhayat-zougari",
+    title: "Rencontre avec le Dr Ghita Belkhayat Zougari au Centre Oncovita",
+    category: "Conférence",
+    date: "2025-02-12",
+    location: "Centre Oncovita, Casablanca",
+    image: belkhayat1,
+    imageAlt:
+      "Soirée d'échange au Centre Oncovita avec le Dr Ghita Belkhayat Zougari et le Dr Malak Rita Hajji",
+    images: [
+      {
+        src: belkhayat1,
+        alt: "Patientes et invitées réunies au Centre Oncovita pour une rencontre avec le Dr Ghita Belkhayat Zougari",
+      },
+      {
+        src: belkhayat2,
+        alt: "Dr Malak Rita Hajji et Dr Ghita Belkhayat Zougari prenant la parole au Centre Oncovita lors d'une rencontre dédiée aux patientes",
+      },
+    ],
+    excerpt:
+      "Une soirée d'échange au Centre Oncovita avec le Dr Ghita Belkhayat Zougari, autour des patientes et de l'accompagnement intégratif.",
+    description:
+      "Le Centre Oncovita a accueilli le Dr Ghita Belkhayat Zougari pour une rencontre intimiste avec les patientes et leurs proches. Un temps d'écoute, de partage et d'information, fidèle à l'esprit Oncovita : prendre soin du corps et de l'esprit, ensemble.",
+    highlights: [
+      "Rencontre avec le Dr Ghita Belkhayat Zougari",
+      "Échange ouvert avec les patientes",
+      "Soirée au Centre Oncovita",
+    ],
+  },
+  {
+    slug: "shooting-oncovita",
+    title: "Shooting photo au Centre Oncovita",
+    category: "Vie du Centre",
+    date: "2025-06-20",
+    location: "Centre Oncovita, Casablanca",
+    image: shooting1,
+    imageAlt:
+      "Coulisses d'un shooting photo au Centre Oncovita avec le Dr Malak Rita Hajji",
+    images: [
+      {
+        src: shooting1,
+        alt: "Dr Malak Rita Hajji avec l'équipe du shooting photo dans son cabinet au Centre Oncovita",
+      },
+      {
+        src: shooting2,
+        alt: "Coulisses du tournage au Centre Oncovita : Dr Malak Rita Hajji à son bureau pendant la prise de vue",
+      },
+    ],
+    excerpt:
+      "Coulisses d'un shooting au Centre Oncovita, pour donner à voir l'esprit du lieu et celles et ceux qui l'animent.",
+    description:
+      "Le temps d'une journée, le Centre Oncovita s'est transformé en plateau pour un shooting photo et vidéo. L'occasion de capturer l'âme du lieu, l'attention portée aux détails et la complicité de l'équipe qui accompagne chaque patiente au quotidien.",
+    highlights: [
+      "Shooting photo et vidéo au Centre",
+      "Cabinet du Dr Malak Rita Hajji",
+      "Coulisses et équipe technique",
+    ],
+  },
+  {
+    slug: "decor-centre-oncovita",
+    title: "Au Centre Oncovita",
+    category: "Vie du Centre",
+    date: "2025-05-05",
+    location: "Centre Oncovita, Casablanca",
+    image: decorOncovita,
+    imageAlt:
+      "Détail de l'accueil du Centre Oncovita : papillon lumineux et bouquet de fleurs sur le comptoir en marbre",
+    images: [
+      {
+        src: decorOncovita,
+        alt: "Comptoir d'accueil du Centre Oncovita avec son papillon emblématique en néon bleu et un bouquet de fleurs",
+      },
+    ],
+    excerpt:
+      "Un détail du Centre Oncovita.",
+    description:
+      "Un détail du Centre Oncovita.",
   },
 ];
 
