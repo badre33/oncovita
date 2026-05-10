@@ -3,6 +3,11 @@ import photoA from "@/assets/event-yoga-relaxation.jpeg";
 import photoB from "@/assets/event-yoga-mouvement.jpeg";
 import photoC from "@/assets/event-table-parole.jpeg";
 import photoD from "@/assets/event-equipe-oncovita.jpeg";
+import roseDarzhor1 from "@/assets/event-octobre-rose-darzhor-1.jpg";
+import roseLittoral from "@/assets/event-octobre-rose-littoral.jpg";
+import roseEntreprise3 from "@/assets/event-octobre-rose-entreprise-3.jpg";
+import roseEntreprise4 from "@/assets/event-octobre-rose-entreprise-4.jpg";
+import roseDarzhor5 from "@/assets/event-octobre-rose-darzhor-5.jpg";
 
 export type EventCategory =
   | "Sensibilisation"
