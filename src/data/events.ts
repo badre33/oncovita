@@ -13,6 +13,11 @@ import roseCfcim from "@/assets/event-octobre-rose-cfcim.jpg";
 import curie1 from "@/assets/event-curietherapie-1.jpg";
 import curie2 from "@/assets/event-curietherapie-2.jpg";
 import curie3 from "@/assets/event-curietherapie-3.jpg";
+import belkhayat1 from "@/assets/event-belkhayat-1.jpg";
+import belkhayat2 from "@/assets/event-belkhayat-2.jpg";
+import shooting1 from "@/assets/event-shooting-1.jpg";
+import shooting2 from "@/assets/event-shooting-2.jpg";
+import decorOncovita from "@/assets/event-decor-oncovita.jpg";
 
 export type EventCategory =
   | "Sensibilisation"
