@@ -46,10 +46,16 @@ const Footer = () => {
                 <Mail size={16} />
                 contact@oncovita.ma
               </a>
-              <div className="flex items-start gap-3 text-primary-foreground/50 text-sm font-body">
+              <a
+                href="https://www.google.com/maps/dir/?api=1&destination=Oncovita+Casablanca&destination_place_id=ChIJs-nWZZktpg0RkmzRqHZnGG8"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-start gap-3 text-primary-foreground/50 hover:text-primary-foreground transition-colors text-sm font-body"
+                aria-label="Itinéraire vers le Centre Oncovita"
+              >
                 <MapPin size={16} className="mt-0.5 shrink-0" />
                 5ème étage, Immeuble FIRST, 401 Rte d'El Jadida, Casablanca 20000
-              </div>
+              </a>
             </div>
           </div>
         </div>
