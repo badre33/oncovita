@@ -76,8 +76,6 @@ export const applySeo = (opts: SeoOptions) => {
     description,
     keywords,
     url,
-  image = DEFAULT_SHARE_IMAGE,
-  imageAlt = DEFAULT_SHARE_IMAGE_ALT,
     type = "website",
     siteName = "Oncovita",
     locale = "fr_FR",
