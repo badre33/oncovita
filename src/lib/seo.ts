@@ -56,6 +56,8 @@ export interface SeoOptions {
 }
 
 const SITE_ORIGIN = "https://oncovita.ma";
+const DEFAULT_SHARE_IMAGE = "/og-image.jpg?v=oncovita";
+const DEFAULT_SHARE_IMAGE_ALT = "Logo Oncovita — Centre d'Oncologie Intégrative à Casablanca";
 
 const absolute = (path: string) => {
   if (/^https?:\/\//i.test(path)) return path;
@@ -74,8 +76,6 @@ export const applySeo = (opts: SeoOptions) => {
     description,
     keywords,
     url,
-    image,
-    imageAlt,
     type = "website",
     siteName = "Oncovita",
     locale = "fr_FR",
@@ -96,22 +96,18 @@ export const applySeo = (opts: SeoOptions) => {
   setProperty("og:site_name", siteName);
   setProperty("og:locale", locale);
   if (canonical) setProperty("og:url", canonical);
-  if (image) {
-    const absImg = absolute(image);
-    setProperty("og:image", absImg);
-    setProperty("og:image:secure_url", absImg);
-    setProperty("og:image:width", "1280");
-    setProperty("og:image:height", "832");
-    if (imageAlt) setProperty("og:image:alt", imageAlt);
-  }
+  const absImg = absolute(DEFAULT_SHARE_IMAGE);
+  setProperty("og:image", absImg);
+  setProperty("og:image:secure_url", absImg);
+  setProperty("og:image:width", "1200");
+  setProperty("og:image:height", "630");
+  setProperty("og:image:alt", DEFAULT_SHARE_IMAGE_ALT);
 
   // Twitter Card
-  setName("twitter:card", image ? "summary_large_image" : "summary");
+  setName("twitter:card", "summary_large_image");
   setName("twitter:title", title);
   setName("twitter:description", description);
-  if (image) {
-    setName("twitter:image", absolute(image));
-    if (imageAlt) setName("twitter:image:alt", imageAlt);
-  }
+  setName("twitter:image", absImg);
+  setName("twitter:image:alt", DEFAULT_SHARE_IMAGE_ALT);
   if (twitterHandle) setName("twitter:site", twitterHandle);
 };
