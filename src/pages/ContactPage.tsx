@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+import { applySeo } from "@/lib/seo";
 import { useState } from "react";
 import { Mail, Phone, MapPin, Send, Instagram, Linkedin, Facebook, Clock, Navigation } from "lucide-react";
 import Layout from "@/components/Layout";
@@ -7,6 +9,15 @@ import { toast } from "sonner";
 import terrasseOncovita from "@/assets/terrasse-oncovita.jpg";
 
 const ContactPage = () => {
+  useEffect(() => {
+    applySeo({
+      title: "Contact — Centre Oncovita Casablanca | Rendez-vous & coordonnées",
+      description: "Contactez le Centre Oncovita à Casablanca : téléphone +212 5 22 98 07 19, email contact@oncovita.ma, 401 Route d'El Jadida. Prise de rendez-vous et informations.",
+      keywords: ["contact Oncovita", "rendez-vous oncologue Casablanca", "Oncovita téléphone", "Oncovita adresse"],
+      url: "/contact",
+    });
+  }, []);
+
   const [formData, setFormData] = useState({ name: "", email: "", phone: "", message: "" });
   const [sending, setSending] = useState(false);
 
