@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+import { applySeo } from "@/lib/seo";
 import { Heart, Shield, Microscope, Brain, Eye, Clock, Users, Activity, Dumbbell, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import Layout from "@/components/Layout";
@@ -16,6 +18,15 @@ import echappeeBelle from "@/assets/echappee-belle.jpg";
 import lelan from "@/assets/lelan.jpg";
 
 const CenterPage = () => {
+  useEffect(() => {
+    applySeo({
+      title: "Le Centre Oncovita — Oncologie intégrative à Casablanca",
+      description: "Découvrez le Centre Oncovita à Casablanca : espaces de soins, salles de consultation et approche intégrative de la cancérologie alliant médecine, bien-être et activité physique.",
+      keywords: ["centre Oncovita", "oncologie intégrative Casablanca", "centre cancer Casablanca", "soins oncologie Maroc"],
+      url: "/center",
+    });
+  }, []);
+
   const galleryImages = [
     { src: heroCenter, alt: "Accueil Oncovita", label: "Accueil" },
     { src: consultationRoom, alt: "La Parenthèse — Salle de consultation", label: "La Parenthèse" },
