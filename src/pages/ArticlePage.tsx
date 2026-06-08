@@ -81,8 +81,24 @@ const ArticlePage = () => {
     });
     ld.id = "ld-article";
     document.head.appendChild(ld);
+
+    // JSON-LD BreadcrumbList (fil d'Ariane)
+    const bc = document.createElement("script");
+    bc.type = "application/ld+json";
+    bc.id = "ld-breadcrumb";
+    bc.text = JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Accueil", item: "https://oncovita.ma/" },
+        { "@type": "ListItem", position: 2, name: "Journal", item: "https://oncovita.ma/journal" },
+        { "@type": "ListItem", position: 3, name: post.title, item: "https://oncovita.ma/journal/" + post.slug },
+      ],
+    });
+    document.head.appendChild(bc);
     return () => {
       document.getElementById("ld-article")?.remove();
+      document.getElementById("ld-breadcrumb")?.remove();
       document
         .querySelectorAll('meta[data-article-tag="true"]')
         .forEach((el) => el.remove());
