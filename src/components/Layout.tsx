@@ -14,7 +14,7 @@ const Layout = ({ children }: LayoutProps) => {
       </main>
       <Footer />
       <a
-        href="https://wa.me/212625933918?text=Bonjour%2C%20je%20vous%20contacte%20depuis%20le%20site%20Oncovita.%20Je%20souhaite%20obtenir%20des%20informations%20et%20prendre%20rendez-vous.%20Merci."
+        href="https://wa.me/212669337548?text=Bonjour%2C%20je%20vous%20contacte%20depuis%20le%20site%20Oncovita.%20Je%20souhaite%20obtenir%20des%20informations%20et%20prendre%20rendez-vous.%20Merci."
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Contacter Oncovita sur WhatsApp"
