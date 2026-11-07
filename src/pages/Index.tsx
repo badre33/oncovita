@@ -31,14 +31,14 @@ const Index = () => {
         <div className="relative container-oncovita px-5 md:px-6 lg:px-20 py-16 md:py-20">
           <div className="max-w-2xl">
             <AnimatedSection>
-              <p className="font-body text-xs tracking-[0.3em] uppercase text-teal-light mb-6">
-                Centre d'Oncologie Intégrative — Casablanca
-              </p>
+              <h1 className="font-body text-xs tracking-[0.3em] uppercase text-teal-light mb-6">
+                Centre d'oncologie intégrative à Casablanca
+              </h1>
             </AnimatedSection>
             <AnimatedSection delay={200}>
-              <h1 className="font-display text-3xl md:text-5xl lg:text-6xl text-primary-foreground leading-tight mb-4 md:mb-6">
-                Soigner le corps, apaiser l'esprit, accompagner avec humanité.
-              </h1>
+              <p className="font-display text-3xl md:text-5xl lg:text-6xl text-primary-foreground leading-tight mb-4 md:mb-6">
+                Soigner le corps, apaiser l'esprit, nourrir l'espoir.
+              </p>
             </AnimatedSection>
             <AnimatedSection delay={400}>
               <p className="font-body text-primary-foreground text-base md:text-xl leading-relaxed mb-8 md:mb-10 max-w-xl drop-shadow-[0_2px_8px_rgba(0,0,0,0.5)]">
@@ -216,7 +216,7 @@ const Index = () => {
                 Dr Malak Rita Hajji
               </h2>
               <p className="font-body text-muted-foreground leading-relaxed mb-6">
-                Dr Malak Rita Hajji est oncologue médicale. Issue d'une famille engagée dans la lutte 
+                Dr Malak Rita Hajji est onco-radiothérapeute. Issue d'une famille engagée dans la lutte 
                 contre le cancer — son père, Dr Omar Hajji, est l'un des pionniers de l'oncologie au Maroc 
                 et cofondateur du groupe Oncorad — elle a grandi au contact de cette discipline.
               </p>
@@ -233,8 +233,8 @@ const Index = () => {
                 privée au Maroc en tant que membre du conseil d'administration du groupe Oncorad.
               </p>
               <Button variant="default" size="lg" asChild>
-                <Link to="/center" className="gap-2">
-                  Découvrir le Parcours de Soins <ArrowRight size={16} />
+                <Link to="/dr-malak-rita-hajji" className="gap-2">
+                  Découvrir le Dr Malak Rita Hajji <ArrowRight size={16} />
                 </Link>
               </Button>
             </AnimatedSection>

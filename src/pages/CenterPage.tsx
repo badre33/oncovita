@@ -260,7 +260,7 @@ const CenterPage = () => {
                   Dr Malak Rita Hajji
                 </h2>
                 <p className="font-body text-muted-foreground leading-relaxed mb-4">
-                  Dr Malak Rita Hajji est oncologue médicale. Issue d'une famille engagée dans la lutte contre 
+                  Dr Malak Rita Hajji est onco-radiothérapeute. Issue d'une famille engagée dans la lutte contre 
                   le cancer — son père, Dr Omar Hajji, est l'un des pionniers de l'oncologie au Maroc et cofondateur 
                   du groupe Oncorad — elle a grandi au contact de cette discipline.
                 </p>
@@ -278,7 +278,7 @@ const CenterPage = () => {
                 </p>
                 <div className="grid grid-cols-2 gap-6">
                   {[
-                    { label: "Oncologie Médicale", value: "Spécialisation" },
+                    { label: "Onco-radiothérapie", value: "Spécialisation" },
                     { label: "Groupe Oncorad", value: "Héritage" },
                     { label: "Centrée sur le Patient", value: "Philosophie" },
                     { label: "Innovation", value: "Engagement" },
