@@ -19,7 +19,7 @@ const faqs = [
   },
   {
     q: "Où consulte le Dr Malak Rita Hajji à Casablanca ?",
-    a: "Elle consulte au centre Oncovita : 5e étage, Immeuble FIRST, 401 route d'El Jadida, Casablanca. Le centre est ouvert du lundi au vendredi, de 8h30 à 12h30 et de 13h30 à 17h30.",
+    a: "Elle consulte au centre Oncovita : 5e étage, Immeuble FIRST, 401 route d'El Jadida, Casablanca. Le centre est ouvert du lundi au vendredi, de 8h30 à 12h30 et de 13h30 à 17h30. Les séances de radiothérapie ont lieu à la Clinique Le Littoral (groupe Oncorad), à Casablanca, où elle exerce.",
   },
   {
     q: "Comment prendre rendez-vous avec le Dr Malak Rita Hajji ?",
@@ -146,7 +146,8 @@ const DoctorPage = () => {
                 </h1>
                 <p className="font-body text-muted-foreground text-lg leading-relaxed mb-8">
                   Le Dr Malak Rita Hajji consulte au centre Oncovita, centre d'oncologie intégrative
-                  qu'elle a fondé au 5e étage de l'Immeuble FIRST, 401 route d'El Jadida, à Casablanca.
+                  qu'elle a fondé au 5e étage de l'Immeuble FIRST, 401 route d'El Jadida, à Casablanca. Elle réalise
+                  les traitements de radiothérapie à la Clinique Le Littoral (groupe Oncorad), où elle exerce.
                 </p>
                 <div className="flex flex-wrap gap-4">
                   <Button variant="default" size="lg" asChild>

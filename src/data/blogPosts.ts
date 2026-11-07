@@ -41,13 +41,14 @@ export const blogPosts: BlogPost[] = [
     date: "2026-11-07",
     readingTime: "6 min",
     metaDescription:
-      "Radiothérapie : consultation, séance de repérage, séances, suivi et effets secondaires possibles. Les étapes du traitement expliquées par Oncovita, à Casablanca.",
+      "Radiothérapie à Casablanca : consultation, repérage, séances à la Clinique Le Littoral, suivi et effets secondaires possibles. Les étapes expliquées par Oncovita.",
     keywords: [
       "radiothérapie Casablanca",
       "déroulement radiothérapie",
       "séance de radiothérapie",
       "effets secondaires radiothérapie",
       "onco-radiothérapeute Casablanca",
+      "Clinique Le Littoral radiothérapie",
     ],
     excerpt:
       "De la première consultation au suivi après le traitement, voici comment se déroule une radiothérapie et comment certains effets peuvent être anticipés.",
@@ -59,6 +60,10 @@ export const blogPosts: BlogPost[] = [
       {
         type: "p",
         text: "Savoir comment se déroule le traitement aide souvent à l'aborder plus sereinement. Voici les grandes étapes d'une radiothérapie externe, la forme la plus courante.",
+      },
+      {
+        type: "p",
+        text: "Pour les patients du Dr Malak Rita Hajji, onco-radiothérapeute et fondatrice d'Oncovita, les séances de radiothérapie ont lieu à la Clinique Le Littoral (groupe Oncorad), à Casablanca, où elle exerce. L'accompagnement et les soins de support se font au centre Oncovita.",
       },
       { type: "h2", text: "La radiothérapie agit sur une zone précise du corps" },
       {
@@ -120,7 +125,7 @@ export const blogPosts: BlogPost[] = [
       { type: "h2", text: "À Oncovita, l'accompagnement complète le traitement" },
       {
         type: "p",
-        text: "Le Dr Malak Rita Hajji, onco-radiothérapeute, a fondé Oncovita pour que l'accompagnement fasse pleinement partie du parcours de soins. Les soins de support proposés au centre viennent en complément des traitements prescrits. Ils ne les remplacent pas : ils visent à améliorer le confort et la qualité de vie pendant et après la radiothérapie.",
+        text: "Le Dr Malak Rita Hajji, onco-radiothérapeute, réalise les traitements de radiothérapie à la Clinique Le Littoral. Elle a fondé Oncovita pour que l'accompagnement fasse pleinement partie du parcours de soins. Les soins de support proposés au centre viennent en complément des traitements prescrits. Ils ne les remplacent pas : ils visent à améliorer le confort et la qualité de vie pendant et après la radiothérapie.",
       },
       {
         type: "quote",
