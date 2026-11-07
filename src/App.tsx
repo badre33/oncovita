@@ -11,6 +11,7 @@ import EngagementPage from "./pages/EngagementPage.tsx";
 import AccessPage from "./pages/AccessPage.tsx";
 import NotFound from "./pages/NotFound.tsx";
 import DoctorPage from "./pages/DoctorPage.tsx";
+import SupportCarePage from "./pages/SupportCarePage.tsx";
 import ScrollToTop from "./components/ScrollToTop";
 
 const queryClient = new QueryClient();
@@ -30,6 +31,7 @@ const App = () => (
           <Route path="/engagement" element={<EngagementPage />} />
           <Route path="/acces" element={<AccessPage />} />
           <Route path="/dr-malak-rita-hajji" element={<DoctorPage />} />
+          <Route path="/soins-de-support" element={<SupportCarePage />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

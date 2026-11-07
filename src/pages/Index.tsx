@@ -161,7 +161,9 @@ const Index = () => {
                 </ul>
               </div>
               <div className="mb-8">
-                <p className="font-body text-foreground font-medium text-sm mb-3">Accompagnement complémentaire :</p>
+                <p className="font-body text-foreground font-medium text-sm mb-3">
+                  Accompagnement complémentaire (<Link to="/soins-de-support" className="text-primary underline underline-offset-4">voir les soins de support</Link>) :
+                </p>
                 <ul className="space-y-2">
                   {["Activité physique adaptée", "Nutrition spécialisée", "Gestion du stress", "Méditation et respiration", "Soutien psychologique", "Ateliers de bien-être"].map((item) => (
                     <li key={item} className="flex items-start gap-3">

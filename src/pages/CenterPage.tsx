@@ -201,7 +201,8 @@ const CenterPage = () => {
                   ))}
                 </ul>
                 <p className="font-body text-sm text-muted-foreground leading-relaxed mt-4">
-                  L'Échappée Belle est un espace dédié au ressourcement et à l'écoute.
+                  L'Échappée Belle est un espace dédié au ressourcement et à l'écoute.{" "}
+                  <Link to="/soins-de-support" className="text-primary underline underline-offset-4">Voir les soins de support</Link>
                 </p>
                 </div>
               </div>
