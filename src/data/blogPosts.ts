@@ -4,6 +4,7 @@ import blogWellbeing from "@/assets/blog-wellbeing.jpg";
 import blogActivity from "@/assets/blog-activity.jpg";
 import blogEmotional from "@/assets/blog-emotional.jpg";
 import blogSoignerAutrement from "@/assets/blog-soigner-autrement.jpg";
+import bureauConsultation from "@/assets/bureau-consultation.jpg";
 
 export type BlogCategory = "Regard Médical" | "Sensibilisation" | "Accompagnement";
 
@@ -30,6 +31,103 @@ export type BlogContentBlock =
   | { type: "quote"; text: string };
 
 export const blogPosts: BlogPost[] = [
+  {
+    slug: "radiotherapie-deroulement-traitement",
+    title: "Radiothérapie : comment se déroule le traitement, étape par étape",
+    subtitle: "Comprendre chaque étape pour aborder le traitement plus sereinement",
+    category: "Regard Médical",
+    image: bureauConsultation,
+    imageAlt: "Bureau de consultation du centre Oncovita à Casablanca, où se prépare le parcours de radiothérapie",
+    date: "2026-11-07",
+    readingTime: "6 min",
+    metaDescription:
+      "Radiothérapie : consultation, séance de repérage, séances, suivi et effets secondaires possibles. Les étapes du traitement expliquées par Oncovita, à Casablanca.",
+    keywords: [
+      "radiothérapie Casablanca",
+      "déroulement radiothérapie",
+      "séance de radiothérapie",
+      "effets secondaires radiothérapie",
+      "onco-radiothérapeute Casablanca",
+    ],
+    excerpt:
+      "De la première consultation au suivi après le traitement, voici comment se déroule une radiothérapie et comment certains effets peuvent être anticipés.",
+    content: [
+      {
+        type: "p",
+        text: "La radiothérapie est l'un des principaux traitements du cancer. Elle utilise des rayonnements pour détruire les cellules cancéreuses ou les empêcher de se multiplier. Selon la situation, elle peut être proposée seule ou associée à la chirurgie, à la chimiothérapie, à l'hormonothérapie ou à d'autres traitements.",
+      },
+      {
+        type: "p",
+        text: "Savoir comment se déroule le traitement aide souvent à l'aborder plus sereinement. Voici les grandes étapes d'une radiothérapie externe, la forme la plus courante.",
+      },
+      { type: "h2", text: "La radiothérapie agit sur une zone précise du corps" },
+      {
+        type: "p",
+        text: "La chimiothérapie circule dans tout l'organisme. La radiothérapie externe, elle, agit localement : les rayons sont dirigés vers la zone à traiter, en limitant autant que possible la dose reçue par les organes voisins.",
+      },
+      {
+        type: "p",
+        text: "Une séance est indolore : on ne sent pas les rayons. Après une séance de radiothérapie externe, le patient n'est pas radioactif et peut être en contact avec ses proches, y compris les enfants.",
+      },
+      { type: "h2", text: "Le traitement commence par une consultation avec l'onco-radiothérapeute" },
+      {
+        type: "p",
+        text: "L'onco-radiothérapeute étudie le dossier médical et les examens. Il explique pourquoi la radiothérapie est proposée, ce que l'on en attend, le nombre de séances prévu et les effets secondaires possibles. C'est le bon moment pour poser toutes vos questions.",
+      },
+      { type: "h2", text: "Une séance de repérage prépare le traitement" },
+      {
+        type: "p",
+        text: "Avant la première séance, un scanner est réalisé dans la position exacte qui sera utilisée pendant tout le traitement. Selon la zone traitée, des dispositifs de maintien peuvent être utilisés, comme un masque pour la tête et le cou ou un coussin moulé. De petits repères peuvent aussi être tracés sur la peau.",
+      },
+      {
+        type: "p",
+        text: "À partir de ce scanner, l'onco-radiothérapeute définit la zone à traiter et les organes à protéger. L'équipe de physique médicale calcule ensuite le plan de traitement. Cette préparation prend généralement quelques jours.",
+      },
+      { type: "h2", text: "Les séances durent généralement quelques minutes" },
+      {
+        type: "p",
+        text: "Les séances ont souvent lieu du lundi au vendredi, pendant une durée qui varie selon le protocole : de quelques jours à plusieurs semaines. L'installation sur la table prend généralement plus de temps que l'irradiation elle-même.",
+      },
+      {
+        type: "p",
+        text: "Pendant la séance, le patient est seul dans la salle, mais l'équipe le surveille en permanence par caméra et peut communiquer avec lui. Il suffit de rester immobile et de respirer normalement, sauf consigne particulière.",
+      },
+      { type: "h2", text: "Les effets secondaires dépendent de la zone traitée" },
+      {
+        type: "p",
+        text: "Chaque traitement est différent, et tous les patients ne ressentent pas les mêmes effets. Les plus fréquents sont une fatigue qui peut s'installer progressivement et une réaction de la peau dans la zone traitée, parfois proche d'un coup de soleil.",
+      },
+      {
+        type: "p",
+        text: "D'autres effets dépendent de la région irradiée : gêne pour avaler lors d'un traitement de la gorge, troubles digestifs ou urinaires lors d'un traitement du bassin, par exemple. La plupart s'atténuent généralement dans les semaines qui suivent la fin du traitement. Votre équipe médicale vous indiquera ceux qui concernent votre situation.",
+      },
+      { type: "h2", text: "Certains effets peuvent être anticipés et accompagnés" },
+      {
+        type: "ul",
+        items: [
+          "Signaler à l'équipe tout nouveau symptôme, sans attendre la consultation suivante",
+          "Prendre soin de la peau de la zone traitée avec les produits conseillés par l'équipe, et ne rien appliquer juste avant une séance sans avis médical",
+          "Garder une activité physique adaptée, qui peut aider à limiter la fatigue",
+          "Être accompagné sur le plan nutritionnel si l'alimentation devient difficile",
+          "Parler de ce que l'on ressent : un soutien psychologique fait partie de la prise en charge",
+        ],
+      },
+      { type: "h2", text: "Un suivi a lieu pendant et après le traitement" },
+      {
+        type: "p",
+        text: "Des consultations régulières ont lieu pendant les séances pour adapter les soins si besoin. Après la radiothérapie, un suivi est organisé pour vérifier l'efficacité du traitement et surveiller d'éventuels effets plus tardifs.",
+      },
+      { type: "h2", text: "À Oncovita, l'accompagnement complète le traitement" },
+      {
+        type: "p",
+        text: "Le Dr Malak Rita Hajji, onco-radiothérapeute, a fondé Oncovita pour que l'accompagnement fasse pleinement partie du parcours de soins. Les soins de support proposés au centre viennent en complément des traitements prescrits. Ils ne les remplacent pas : ils visent à améliorer le confort et la qualité de vie pendant et après la radiothérapie.",
+      },
+      {
+        type: "quote",
+        text: "Traiter la maladie est essentiel. Accompagner la personne l'est également.",
+      },
+    ],
+  },
   {
     slug: "comprendre-oncologie-integrative",
     title: "Comprendre l'oncologie intégrative : une approche globale du cancer",

@@ -237,6 +237,11 @@ const DoctorPage = () => {
                   Découvrir le parcours de soins <ArrowRight size={16} />
                 </Link>
               </Button>
+              <Button variant="link" className="px-0 mt-1 block" asChild>
+                <Link to="/journal/radiotherapie-deroulement-traitement" className="gap-2">
+                  Comment se déroule une radiothérapie <ArrowRight size={16} />
+                </Link>
+              </Button>
             </AnimatedSection>
           </div>
         </div>
