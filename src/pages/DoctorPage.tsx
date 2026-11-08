@@ -15,7 +15,7 @@ const WHATSAPP_URL =
 const faqs = [
   {
     q: "Qui est le Dr Malak Rita Hajji ?",
-    a: "Le Dr Malak Rita Hajji est onco-radiothérapeute à Casablanca et fondatrice d'Oncovita, centre d'oncologie intégrative situé au 5e étage de l'Immeuble FIRST, 401 route d'El Jadida. Elle est également membre du conseil d'administration du groupe Oncorad.",
+    a: "Le Dr Malak Rita Hajji est onco-radiothérapeute à Casablanca et fondatrice d'Oncovita, centre d'oncologie intégrative situé au 5e étage de l'Immeuble FIRST, 401 route d'El Jadida. Elle pratique la cancérologie depuis 16 ans, exerce à la Clinique Le Littoral depuis 2016 et est administratrice du groupe Oncorad. Elle a été formée au CHU Ibn Rochd de Casablanca, au CHU de Bordeaux, à l'Université Paris VI et à l'Institut Gustave Roussy.",
   },
   {
     q: "Où consulte le Dr Malak Rita Hajji à Casablanca ?",
@@ -32,6 +32,34 @@ const faqs = [
   {
     q: "Les soins de support proposés à Oncovita remplacent-ils les traitements du cancer ?",
     a: "Non. Les soins de support et les accompagnements proposés à Oncovita viennent en complément des traitements prescrits par l'équipe oncologique (chirurgie, chimiothérapie, radiothérapie, immunothérapie, hormonothérapie). Ils visent à améliorer le confort et la qualité de vie pendant le parcours de soins.",
+  },
+];
+
+const formation = [
+  { year: "2002-2009", label: "Doctorat en médecine, Faculté de médecine et de pharmacie de Casablanca" },
+  { year: "2009-2011", label: "Internat, CHU Ibn Rochd, Casablanca" },
+  { year: "2011-2016", label: "Résidanat en oncologie-radiothérapie, CHU de Casablanca" },
+  { year: "2014-2015", label: "Stage hospitalo-universitaire, CHU Haut-Lévêque, Bordeaux (France)" },
+  { year: "2014", label: "Diplôme universitaire de radiothérapie de hautes technicités, CHU de Nice et CHU de Lille (Centre Oscar Lambret)" },
+  { year: "2015", label: "Diplôme universitaire de carcinologie clinique, Université Paris VI" },
+  { year: "2014, 2024", label: "Formation en chimiothérapie, Institut Gustave Roussy" },
+];
+
+const expertise = [
+  { title: "Oncologie", text: "Cancers du sein, du système digestif, gynécologiques, du thorax, ORL, neuro-oncologie, sarcomes et urologie." },
+  { title: "Radiothérapie", text: "IMRT, VMAT, IGRT, radiothérapie stéréotaxique (SBRT), radiochirurgie et curiethérapie." },
+  { title: "Traitements systémiques", text: "Chimiothérapie, immunothérapie, thérapies ciblées et hormonothérapie." },
+  { title: "Soins de support", text: "Oncologie intégrative, nutrition, psychologie, activité physique adaptée et qualité de vie." },
+];
+
+const publications = [
+  {
+    title: "Integrative Oncology in Clinical Practice, Research and Education: Middle-Eastern and Global Perspectives",
+    journal: "Supportive Care in Cancer (Springer Nature)",
+  },
+  {
+    title: "Clinical outcomes of LINAC-based stereotactic radiosurgery for trigeminal neuralgia in a low- and middle-income country",
+    journal: "Surgical Neurology International",
   },
 ];
 
@@ -102,6 +130,15 @@ const DoctorPage = () => {
       ],
       areaServed: { "@type": "City", name: "Casablanca" },
       parentOrganization: { "@type": "MedicalClinic", name: "Oncovita", url: "https://oncovita.ma/" },
+      worksFor: [
+        { "@type": "MedicalClinic", name: "Oncovita", url: "https://oncovita.ma/" },
+        { "@type": "MedicalClinic", name: "Clinique Le Littoral" },
+      ],
+      alumniOf: [
+        { "@type": "CollegeOrUniversity", name: "Faculté de médecine et de pharmacie de Casablanca" },
+        { "@type": "CollegeOrUniversity", name: "Université Paris VI" },
+      ],
+      knowsLanguage: ["ar", "fr", "en", "es"],
     });
 
     add("ld-doctor-faq", {
@@ -194,10 +231,55 @@ const DoctorPage = () => {
               Au fil de sa formation et de son expérience, elle développe une vision claire de la médecine :
               une oncologie exigeante sur le plan scientifique, attentive à ce que vivent les patients.
             </p>
-            <p className="font-body text-muted-foreground leading-relaxed">
-              En parallèle de son activité clinique, elle est membre du conseil d'administration du groupe
-              Oncorad.
+            <p className="font-body text-muted-foreground leading-relaxed mb-4">
+              Spécialiste en oncologie-radiothérapie, elle pratique la cancérologie depuis 16 ans. Depuis 2016,
+              elle exerce à la Clinique Le Littoral, à Casablanca, où elle prend en charge des patients atteints
+              de cancers solides et participe chaque jour aux réunions de concertation pluridisciplinaire.
             </p>
+            <p className="font-body text-muted-foreground leading-relaxed mb-4">
+              Depuis 2019, elle est administratrice du groupe Oncorad et membre de son comité exécutif.
+            </p>
+            <p className="font-body text-muted-foreground leading-relaxed">
+              Elle a fondé Oncovita, premier centre privé au Maroc entièrement dédié à l'oncologie intégrative,
+              pour accompagner les patients au-delà du traitement.
+            </p>
+          </AnimatedSection>
+        </div>
+      </section>
+
+      {/* Formation */}
+      <section className="section-padding">
+        <div className="container-oncovita max-w-3xl mx-auto">
+          <AnimatedSection>
+            <p className="font-body text-xs tracking-[0.3em] uppercase text-primary mb-4">Formation</p>
+            <h2 className="font-display text-3xl md:text-4xl text-foreground mb-8">
+              Une formation au Maroc et en France
+            </h2>
+            <ul className="space-y-4 mb-10">
+              {formation.map((f) => (
+                <li key={f.label} className="flex items-start gap-4">
+                  <span className="font-body text-sm text-primary font-medium w-24 shrink-0 pt-0.5">{f.year}</span>
+                  <span className="font-body text-muted-foreground leading-relaxed">{f.label}</span>
+                </li>
+              ))}
+            </ul>
+            <h2 className="font-display text-2xl md:text-3xl text-foreground mb-6">Domaines d'expertise</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              {expertise.map((e) => (
+                <div key={e.title} className="bg-card rounded-2xl shadow-soft p-6">
+                  <h3 className="font-display text-lg text-foreground mb-2">{e.title}</h3>
+                  <p className="font-body text-sm text-muted-foreground leading-relaxed">{e.text}</p>
+                </div>
+              ))}
+            </div>
+            <h2 className="font-display text-2xl md:text-3xl text-foreground mt-10 mb-6">Publications</h2>
+            <ul className="space-y-4">
+              {publications.map((pub) => (
+                <li key={pub.title} className="font-body text-muted-foreground leading-relaxed">
+                  « {pub.title} », <em>{pub.journal}</em>
+                </li>
+              ))}
+            </ul>
           </AnimatedSection>
         </div>
       </section>
