@@ -63,6 +63,31 @@ const publications = [
   },
 ];
 
+const PODCAST_ID = "heNCGUB-Cm4";
+
+const presse = [
+  {
+    media: "Santé Mag",
+    title: "Cancer du col de l'utérus au Maroc : le Dr Hajji appelle à une approche intégrative",
+    url: "https://santemag.ma/cancer-du-col-de-luterus-au-maroc-le-dr-hajji-appelle-a-une-approche-integrative/",
+  },
+  {
+    media: "Santé Mag",
+    title: "Avant qu'il ne soit trop tard : comprendre le cancer du col de l'utérus avec le Dr Hajji",
+    url: "https://santemag.ma/avant-quil-ne-soit-trop-tard-comprendre-le-cancer-du-col-de-luterus-avec-le-dr-hajji/",
+  },
+  {
+    media: "Santé Mag",
+    title: "Cancer du col de l'utérus, une maladie silencieuse expliquée par le Dr Hajji",
+    url: "https://santemag.ma/cancer-du-col-de-luterus-une-maladie-silencieuse-expliquee-par-le-dr-hajji/",
+  },
+  {
+    media: "Femmes du Maroc",
+    title: "Dr Malak Rita Hajji : « Par peur, certaines femmes consultent tardivement »",
+    url: "https://femmesdumaroc.com/reportage/interviews/dr-malak-rita-hajji-par-peur-certaines-femmes-consultent-tardivement",
+  },
+];
+
 const consultationSteps = [
   "Écouter l'histoire du patient",
   "Analyser les examens et le dossier médical",
@@ -151,6 +176,20 @@ const DoctorPage = () => {
       })),
     });
 
+    add("ld-doctor-video", {
+      "@context": "https://schema.org",
+      "@type": "VideoObject",
+      name: "Octobre Rose : Du traitement à l'accompagnement humain, le Dr Hajji décrypte le cancer du sein",
+      description:
+        "À l'occasion d'Octobre Rose, L'Instant Santé (Santé Mag Maroc) reçoit le Dr Malak Rita Hajji, onco-radiothérapeute et fondatrice d'Oncovita, pour parler du cancer du sein, du dépistage précoce, de la radiothérapie moderne et de l'accompagnement des patientes.",
+      thumbnailUrl: `https://i.ytimg.com/vi/${PODCAST_ID}/hqdefault.jpg`,
+      uploadDate: "2026-10-28",
+      duration: "PT21M11S",
+      embedUrl: `https://www.youtube.com/embed/${PODCAST_ID}`,
+      contentUrl: `https://www.youtube.com/watch?v=${PODCAST_ID}`,
+      publisher: { "@type": "Organization", name: "Santé Mag Maroc" },
+    });
+
     add("ld-doctor-breadcrumb", {
       "@context": "https://schema.org",
       "@type": "BreadcrumbList",
@@ -161,7 +200,7 @@ const DoctorPage = () => {
     });
 
     return () => {
-      ["ld-doctor-physician", "ld-doctor-faq", "ld-doctor-breadcrumb"].forEach((id) =>
+      ["ld-doctor-physician", "ld-doctor-faq", "ld-doctor-video", "ld-doctor-breadcrumb"].forEach((id) =>
         document.getElementById(id)?.remove(),
       );
     };
@@ -277,6 +316,49 @@ const DoctorPage = () => {
               {publications.map((pub) => (
                 <li key={pub.title} className="font-body text-muted-foreground leading-relaxed">
                   « {pub.title} », <em>{pub.journal}</em>
+                </li>
+              ))}
+            </ul>
+          </AnimatedSection>
+        </div>
+      </section>
+
+      {/* Médias */}
+      <section className="section-padding gradient-warm">
+        <div className="container-oncovita max-w-3xl mx-auto">
+          <AnimatedSection>
+            <p className="font-body text-xs tracking-[0.3em] uppercase text-primary mb-4">Dans les médias</p>
+            <h2 className="font-display text-3xl md:text-4xl text-foreground mb-4">
+              Octobre Rose : le Dr Malak Rita Hajji explique le cancer du sein, du traitement à l'accompagnement
+            </h2>
+            <p className="font-body text-muted-foreground leading-relaxed mb-6">
+              Dans L'Instant Santé, l'émission de Santé Mag Maroc, le Dr Malak Rita Hajji parle du dépistage précoce
+              du cancer du sein, des progrès de sa prise en charge, de la radiothérapie moderne, de l'accompagnement
+              des patientes et de la vie après le cancer.
+            </p>
+            <div className="relative w-full overflow-hidden rounded-2xl shadow-card mb-12" style={{ paddingTop: "56.25%" }}>
+              <iframe
+                className="absolute inset-0 w-full h-full"
+                src={`https://www.youtube-nocookie.com/embed/${PODCAST_ID}`}
+                title="Octobre Rose : le Dr Malak Rita Hajji décrypte le cancer du sein (L'Instant Santé, Santé Mag Maroc)"
+                loading="lazy"
+                allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
+            </div>
+            <h3 className="font-display text-2xl text-foreground mb-6">Articles et interviews</h3>
+            <ul className="space-y-4">
+              {presse.map((a) => (
+                <li key={a.url}>
+                  <a
+                    href={a.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block bg-card rounded-2xl shadow-soft p-5 hover:shadow-card transition-shadow"
+                  >
+                    <span className="font-body text-xs tracking-[0.2em] uppercase text-primary">{a.media}</span>
+                    <span className="block font-body text-foreground leading-relaxed mt-1">{a.title}</span>
+                  </a>
                 </li>
               ))}
             </ul>
