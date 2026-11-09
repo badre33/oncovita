@@ -18,7 +18,7 @@ const Footer = () => {
               <a href="https://www.linkedin.com/company/oncovita-ma" target="_blank" rel="noopener noreferrer" className="text-primary-foreground/50 hover:text-primary transition-colors" aria-label="LinkedIn">
                 <Linkedin size={20} />
               </a>
-              <a href="https://web.facebook.com/profile.php?id=61586513205244" target="_blank" rel="noopener noreferrer" className="text-primary-foreground/50 hover:text-primary transition-colors" aria-label="Facebook">
+              <a href="https://web.facebook.com/profile.php?id=61592007386150" target="_blank" rel="noopener noreferrer" className="text-primary-foreground/50 hover:text-primary transition-colors" aria-label="Facebook">
                 <Facebook size={20} />
               </a>
             </div>
